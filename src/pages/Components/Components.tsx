@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Button from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
+import FloatingButton from '../../components/FloatingButton/FloatingButton';
 
 interface IExternalProps {}
 
@@ -13,6 +14,7 @@ const Components: FC<IProps> = () => {
       <Header />
       <SubHeader />
       <Button>ОСТАВИТЬ ОТЗЫВ</Button>
+      <FloatingButton />
     </div>
   );
 };
