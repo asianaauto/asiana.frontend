@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
+import RegionSelectionModal from '../../components/RegionSelectionModal/RegionSelectionModal';
 import { COLORS } from '../../constants';
 
 interface IExternalProps {}
@@ -32,6 +33,7 @@ const Components: FC<IProps> = () => {
       <FloatingButton />
       <br />
       <DropdownMenu label="Главная" navs={navs} />
+      <RegionSelectionModal />
     </div>
   );
 };
