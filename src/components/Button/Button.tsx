@@ -11,17 +11,26 @@ interface IExternalProps {
 
 interface IProps extends IExternalProps {}
 
-const Button:FC<IProps> = ({ onClick, bgColor, color, customStyles }) => {
+const Button: FC<IProps> = ({
+  onClick,
+  bgColor,
+  color,
+  customStyles,
+  children,
+}) => {
   const style = {
     backgroundColor: bgColor || COLORS.red,
     color: color || COLORS.white,
-  }
+  };
 
   return (
-    <button className="button" style={{ ...style, ...customStyles }} onClick={onClick}>
-      ОСТАВИТЬ ОТЗЫВ
+    <button
+      className="button"
+      style={{ ...style, ...customStyles }}
+      onClick={onClick}>
+      {children}
     </button>
   );
-}
+};
 
 export default Button;
