@@ -13,16 +13,18 @@ const FloatingButtonModal: FC<IProps> = ({ visible, onClose }) => {
   return (
     <Modal className="FloatingButtonModal" visible={visible} onClose={onClose}>
       <div className="border">
-        <p>Ваше имя:</p>
-        <div className="textField"></div>
-        <p>Tелефон:</p>
-        <div className="textField"></div>
-        <p>Удобное время звонка:</p>
-        <div className="textField"></div>
-        <p>Дополнительная информация:</p>
-        <div className="textarea"></div>
+        <p className="FloatingButtonModal-paragraph">Ваше имя:</p>
+        <input className="textField"></input>
+        <p className="FloatingButtonModal-paragraph">Tелефон:</p>
+        <input className="textField"></input>
+        <p className="FloatingButtonModal-paragraph">Удобное время звонка:</p>
+        <input className="textField"></input>
+        <p className="FloatingButtonModal-paragraph">
+          Дополнительная информация:
+        </p>
+        <textarea className="textarea"></textarea>
         <div className="submitButton">
-          <p>ОТПРАВИТЬ</p>
+          <p className="FloatingButtonModal-paragraph">ОТПРАВИТЬ</p>
         </div>
       </div>
     </Modal>
