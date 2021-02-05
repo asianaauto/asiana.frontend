@@ -1,0 +1,35 @@
+.DromdownMenu {
+  position: relative;
+  display: inline-block;
+
+  .DropdownMenu-menu {
+    background-color: #191919;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 10px;
+    animation-name: visible;
+    animation-duration: 0.5s;
+
+    .DropdownMenu-menu--li {
+      list-style-type: none;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 4px 0;
+      display: block;
+    }
+  }
+}
+
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
