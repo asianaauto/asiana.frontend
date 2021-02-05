@@ -1,0 +1,49 @@
+.SubHeader-select {
+    height: 20px;
+    width: 90px;
+    margin-left: 10px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-around; 
+    height: 45px;
+    align-items: center;
+}
+
+.SubHeader-icon {
+    margin-left: 10px;
+}
+
+.mx-1 {
+    margin: 0px, 10px;
+}
+
+.SubHeader-item {
+    a {
+        font-size: 18px;  
+        color: #de2a1b;
+        text-decoration: none;
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}
+
+.SubHeader-content {
+    display: flex;
+    align-items: center;  
+}
+
+.SubHeader-block {
+    display: flex;
+    margin-right: 250px;
+    align-items: center;
+}
+
+.SubHeader-item {
+    font-size: 18px;
+    margin-left: 10px;
+    color:  #FFFFFF;
+    text-decoration: none;  
+}
