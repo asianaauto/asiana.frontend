@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import './LeftSideBar.scss';
+import { COLORS } from '../../constants';
 
 interface IExternalProps {
   menu?: Array<{
@@ -9,7 +10,7 @@ interface IExternalProps {
       value: string;
       link: string; // ссылку куда ввести
     };
-    submenu: Array<{
+    submenu?: Array<{
       value: string;
       link: string;
     }>;
@@ -33,6 +34,14 @@ const LeftSideBarMenu: IExternalProps['menu'] = [
       },
     ],
   },
+  {
+    id: 3,
+    label: {
+      type: 'title',
+      value: 'Москва',
+      link: '/',
+    },
+  },
 ];
 
 const LeftSideBar: FC<IProps> = () => {
@@ -44,8 +53,8 @@ const LeftSideBar: FC<IProps> = () => {
 
           <div>
             {' '}
-            {item.submenu.map((item, key) => (
-              <div> {item.value} </div>
+            {item.submenu?.map((item, key) => (
+              <div className="LeftSideBar-submenu"> {item.value} </div>
             ))}
           </div>
         </div>
