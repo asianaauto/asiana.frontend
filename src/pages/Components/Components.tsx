@@ -6,6 +6,7 @@ import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
 import Modal from '../../components/Modal/Modal';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
+import Map from '../../components/Map/Map';
 import { COLORS } from '../../constants';
 
 interface IExternalProps {}
@@ -51,6 +52,7 @@ const Components: FC<IProps> = () => {
         КОнтент
       </Modal>
       <LeftSideBar />
+      <Map />
     </div>
   );
 };
