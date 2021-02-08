@@ -6,6 +6,7 @@ import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
 import Modal from '../../components/Modal/Modal';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import RegionSelectionModal from '../../components/RegionSelectionModal/RegionSelectionModal';
 import { COLORS } from '../../constants';
 
@@ -64,6 +65,7 @@ const Components: FC<IProps> = () => {
         КОнтент
       </Modal>
       <LeftSideBar />
+      <Breadcrumbs />
       <RegionSelectionModal
         visible={isOpenModalRegion}
         onClose={handleCloseModalRegion}
