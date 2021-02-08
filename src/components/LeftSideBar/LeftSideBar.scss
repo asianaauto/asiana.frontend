@@ -1,9 +1,27 @@
 .LeftSideBar-Menu {
-  margin-bottom: 0;
-  list-style: none;
-  padding: 0 10px;
-  line-height: 26px;
-  border-bottom: 1px solid #fff;
-  padding-right: 5px;
   color: #e34c19;
+  border-radius: 1px;
+  width: 260px;
+  height: 40px;
+  background-color: grey;
+  border: 1px solid white;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.LeftSideBar-submenu {
+  color: #e34c19;
+  border-radius: 1px;
+  width: 260px;
+  height: 40px;
+  background-color: grey;
+  border: 1px solid white;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  box-sizing: border-box;
 }
