@@ -6,6 +6,8 @@ import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
 import Modal from '../../components/Modal/Modal';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
+import RegionSelectionModal from '../../components/RegionSelectionModal/RegionSelectionModal';
 import Map from '../../components/Map/Map';
 import { COLORS } from '../../constants';
 
@@ -28,6 +30,7 @@ const navs = [
 
 const Components: FC<IProps> = () => {
   const [isOpenModal, setOpenModal] = useState(false);
+  const [isOpenModalRegion, setOpenModalRegion] = useState(false);
 
   const handleCloseModal = useCallback(() => {
     setOpenModal(false);
@@ -35,6 +38,14 @@ const Components: FC<IProps> = () => {
 
   const handleOpenModal = useCallback(() => {
     setOpenModal(true);
+  }, []);
+
+  const handleCloseModalRegion = useCallback(() => {
+    setOpenModalRegion(false);
+  }, []);
+
+  const handleOpenModalRegion = useCallback(() => {
+    setOpenModalRegion(true);
   }, []);
 
   return (
@@ -45,6 +56,9 @@ const Components: FC<IProps> = () => {
       <Button bgColor={COLORS.orange} onClick={handleOpenModal}>
         Открыть модалку
       </Button>
+      <Button bgColor={COLORS.red} onClick={handleOpenModalRegion}>
+        Открыть модалку region
+      </Button>
       <FloatingButton />
       <br />
       <DropdownMenu label="Главная" navs={navs} />
@@ -53,6 +67,11 @@ const Components: FC<IProps> = () => {
       </Modal>
       <LeftSideBar />
       <Map />
+      <Breadcrumbs />
+      <RegionSelectionModal
+        visible={isOpenModalRegion}
+        onClose={handleCloseModalRegion}
+      />
     </div>
   );
 };
