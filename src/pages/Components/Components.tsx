@@ -8,6 +8,7 @@ import Modal from '../../components/Modal/Modal';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import RegionSelectionModal from '../../components/RegionSelectionModal/RegionSelectionModal';
+import Map from '../../components/Map/Map';
 import { COLORS } from '../../constants';
 
 interface IExternalProps {}
@@ -65,6 +66,7 @@ const Components: FC<IProps> = () => {
         КОнтент
       </Modal>
       <LeftSideBar />
+      <Map />
       <Breadcrumbs />
       <RegionSelectionModal
         visible={isOpenModalRegion}
