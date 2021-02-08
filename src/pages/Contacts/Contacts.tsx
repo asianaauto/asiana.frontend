@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 
 interface IExternalProps {}
 
@@ -11,6 +12,7 @@ const Contacts: FC<IProps> = () => {
     <div>
       <Header />
       <SubHeader />
+      <Breadcrumbs />
     </div>
   );
 };
