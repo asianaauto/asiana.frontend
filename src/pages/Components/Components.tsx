@@ -5,6 +5,7 @@ import SubHeader from '../../components/SubHeader/SubHeader';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
 import Modal from '../../components/Modal/Modal';
+import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import { COLORS } from '../../constants';
 
 interface IExternalProps {}
@@ -49,6 +50,7 @@ const Components: FC<IProps> = () => {
       <Modal visible={isOpenModal} onClose={handleCloseModal}>
         КОнтент
       </Modal>
+      <LeftSideBar />
     </div>
   );
 };
