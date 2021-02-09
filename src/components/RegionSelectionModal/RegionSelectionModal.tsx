@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC } from 'react';
 import './RegionSelectionModal.scss';
 import Modal from '../Modal/Modal';
 
