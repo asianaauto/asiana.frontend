@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './LeftSideBar.scss';
-import { COLORS } from '../../constants';
+// import { COLORS } from '../../constants';
 
 interface IExternalProps {
   menu?: Array<{

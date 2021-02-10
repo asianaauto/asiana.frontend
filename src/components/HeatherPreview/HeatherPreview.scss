@@ -1,0 +1,13 @@
+.HeatherPreview-backround {
+  background-image: url(../../assets/header.jpg);
+  height: 460px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .slider-contener {
+    margin-bottom: -300px;
+    margin-right: 70px;
+  }
+}
