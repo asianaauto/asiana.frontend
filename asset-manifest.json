@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/asiana.frontend/static/css/main.029b61de.chunk.css",
+    "main.js": "/asiana.frontend/static/js/main.dd73d7ec.chunk.js",
+    "main.js.map": "/asiana.frontend/static/js/main.dd73d7ec.chunk.js.map",
+    "runtime-main.js": "/asiana.frontend/static/js/runtime-main.52a2d852.js",
+    "runtime-main.js.map": "/asiana.frontend/static/js/runtime-main.52a2d852.js.map",
+    "static/js/2.5d17b220.chunk.js": "/asiana.frontend/static/js/2.5d17b220.chunk.js",
+    "static/js/2.5d17b220.chunk.js.map": "/asiana.frontend/static/js/2.5d17b220.chunk.js.map",
+    "index.html": "/asiana.frontend/index.html",
+    "static/css/main.029b61de.chunk.css.map": "/asiana.frontend/static/css/main.029b61de.chunk.css.map",
+    "static/js/2.5d17b220.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.5d17b220.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52a2d852.js",
+    "static/js/2.5d17b220.chunk.js",
+    "static/css/main.029b61de.chunk.css",
+    "static/js/main.dd73d7ec.chunk.js"
+  ]
+}
