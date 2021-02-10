@@ -1,0 +1,150 @@
+.Main-news-button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 70px;
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Main-section {
+  display: block;
+  width: 40%;
+  margin-left: 50px;
+}
+
+.Main-section-section {
+  display: flex;
+  margin-top: 80px;
+  padding-top: 50px;
+}
+
+.Main-header {
+  font-size: 17px;
+  word-break: break-word;
+}
+
+.Main-text {
+  font-family: 'PT Sans', Arial, sans-serif;
+  line-height: 20px;
+  color: #191919;
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+.Main-item {
+  display: block;
+  font-family: 'PT Sans', Arial, sans-serif;
+  line-height: 1.1em;
+  color: #191919;
+  font-size: 15px;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.Main-iframe {
+  margin-left: 115px;
+  margin-right: 55px;
+}
+
+.Main-border {
+  border-radius: 1px;
+  background-color: #f2f2f2;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.Main-header-h3 {
+  font-size: 22px;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Main-header-h4 {
+  font-size: 22px;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.Main-section-section-section {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  padding-top: 40px;
+  margin-left: 115px;
+}
+
+.Main-text-block {
+  margin-left: 55px;
+}
+
+.Main-text-text {
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.Main-icon {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: 100;
+
+  p {
+    padding-top: 5px;
+  }
+}
+
+.Main-block--icon {
+  min-width: 30px;
+}
+
+.Main-text-item {
+  display: block;
+  font-family: 'PT Sans', Arial, sans-serif;
+  line-height: 20px;
+  color: #191919;
+  font-size: 15px;
+  font-weight: 50;
+}
+
+.Main-text-color {
+  color: red;
+}
+
+.Main-map {
+  height: 400px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.Main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Main-score {
+  color: red;
+}
+
+.Main-car-service {
+  color: blue;
+  margin-right: 30px;
+}
+
+.Main-car-sale {
+  color: orange;
+}
+
+.Main-BiMap {
+  margin-left: 30px;
+}
