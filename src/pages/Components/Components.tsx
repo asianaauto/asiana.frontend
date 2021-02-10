@@ -9,6 +9,8 @@ import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import RegionSelectionModal from '../../components/RegionSelectionModal/RegionSelectionModal';
 import Map from '../../components/Map/Map';
+import HeatherPreview from '../../components/HeatherPreview/HeatherPreview';
+import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
 import { COLORS } from '../../constants';
 
 interface IExternalProps {}
@@ -52,6 +54,8 @@ const Components: FC<IProps> = () => {
     <div>
       <Header />
       <SubHeader />
+      <HeatherPreview />
+      <BlockWithIcons />
       <Button>ОСТАВИТЬ ОТЗЫВ</Button>
       <Button bgColor={COLORS.orange} onClick={handleOpenModal}>
         Открыть модалку
