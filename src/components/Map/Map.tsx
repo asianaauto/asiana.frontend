@@ -1,5 +1,9 @@
-import React from 'react';
-import { YMaps, Map, Placemark } from 'react-yandex-maps';
+import React, { FC } from 'react';
+import { YMaps, Map, Placemark, MapProps } from 'react-yandex-maps';
+
+interface IExternalProps {}
+
+interface IProps extends IExternalProps, MapProps {}
 
 const mapData = {
   center: [55.751574, 37.573856],
@@ -11,9 +15,9 @@ const coordinates = [
   [57.684758, 39.738521],
 ];
 
-const MapComponent = () => (
+const MapComponent: FC<IProps> = (props) => (
   <YMaps>
-    <Map defaultState={mapData}>
+    <Map defaultState={mapData} {...props}>
       {coordinates.map((coordinate) => (
         <Placemark geometry={coordinate} />
       ))}
