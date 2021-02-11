@@ -10,7 +10,8 @@ import './Main.scss';
 import { BiChevronRight, BiMap } from 'react-icons/bi';
 import { COLORS } from '../../constants';
 import Map from '../../components/Map/Map';
-import Futer from '../../components/Futer/Futer';
+import Footer from '../../components/Footer/Footer';
+import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 
 interface IExternalProps {}
 
@@ -31,7 +32,7 @@ const navs = [
 
 const Main: FC<IProps> = () => {
   return (
-    <div>
+    <div className="Main-pages">
       <Header />
       <SubHeader />
       <HeatherPreview />
@@ -224,7 +225,8 @@ const Main: FC<IProps> = () => {
         <p className="Main-car-sale">ПРОДАЖА АВТОМОБИЛЕЙ С ПРОБЕГОМ</p>
       </section>
       <Map className="Main-map" />
-      <Futer />
+      <Footer />
+      <FloatingFooter />
     </div>
   );
 };

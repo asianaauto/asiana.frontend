@@ -1,0 +1,31 @@
+.FloatingFooter-block {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-around;
+  background-color: black;
+  align-items: center;
+  display: flex;
+}
+
+.FloatingFooter-button-service {
+  &:hover {
+    text-decoration: none;
+    background-color: rgb(16, 102, 28) !important;
+  }
+}
+
+.FloatingFooter-button-bell {
+  &:hover {
+    text-decoration: none;
+    background-color: rgb(150, 13, 13) !important;
+  }
+}
+
+.FloatingFooter-button-application {
+  &:hover {
+    text-decoration: none;
+    background-color: rgb(150, 13, 13) !important;
+  }
+}
