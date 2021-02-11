@@ -1,0 +1,113 @@
+.Futer-border {
+  background-color: black;
+}
+
+.Futer-link {
+  color: orangered;
+  font-size: 13px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: rgb(206, 60, 7);
+  }
+}
+
+.Futer-header {
+  font-size: 16px;
+  color: white;
+}
+
+.Futer-item {
+  color: #797979;
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+.Futer-item-item {
+  color: #797979;
+  font-size: 13px;
+  padding-top: 10px;
+  line-height: 18px;
+}
+
+.Futer-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.Futer-img {
+  height: 45px;
+  width: 120px;
+}
+
+.Fyter-block {
+  padding-left: 30px;
+}
+
+.Futer-list {
+  color: orangered;
+  font-size: 10px;
+  padding-left: 15px;
+  padding-top: 20px;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.Futer-item-p {
+  font-size: 18px;
+  margin-left: 5px;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: rgb(206, 60, 7);
+  }
+}
+
+.Futer-item-p {
+  a {
+    font-size: 18px;
+    color: #de2a1b;
+    text-decoration: none;
+  }
+}
+
+.mx-1 {
+  margin: 0px, 10px;
+}
+
+.Furer-icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Futer-item-pp {
+  margin-left: 5px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: rgb(218, 210, 210);
+  }
+}
+
+.Futer-biPhone {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.Futer-biUser-biPhone {
+  margin-left: 30px;
+  margin-top: -10px;
+  text-align: right;
+}

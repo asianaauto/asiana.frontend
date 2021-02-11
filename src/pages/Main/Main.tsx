@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC } from 'react';
 import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
@@ -10,6 +10,7 @@ import './Main.scss';
 import { BiChevronRight, BiMap } from 'react-icons/bi';
 import { COLORS } from '../../constants';
 import Map from '../../components/Map/Map';
+import Futer from '../../components/Futer/Futer';
 
 interface IExternalProps {}
 
@@ -223,6 +224,7 @@ const Main: FC<IProps> = () => {
         <p className="Main-car-sale">ПРОДАЖА АВТОМОБИЛЕЙ С ПРОБЕГОМ</p>
       </section>
       <Map className="Main-map" />
+      <Futer />
     </div>
   );
 };
