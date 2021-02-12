@@ -8,7 +8,7 @@ import './Breadcrumbs.scss';
 
 const Breadcrumbs = () => (
   <div className="breadcrumbs">
-    <ul className="container">
+    <ul className="breadcrumbs-container">
       <Route path="/:path" component={BreadcrumbsItem} />
     </ul>
   </div>
