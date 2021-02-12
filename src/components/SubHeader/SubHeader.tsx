@@ -40,6 +40,7 @@ const SubHeader: FC<IProps> = () => {
           <div className="SubHeader-item">
             <a href="/">регистрация</a>
           </div>
+
           <div className="SubHeader-icon">
             <BiArchive color={COLORS.orange} size={28} />
           </div>

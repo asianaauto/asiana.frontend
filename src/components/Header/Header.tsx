@@ -14,7 +14,7 @@ const Header: FC<IProps> = () => {
   return (
     <header style={styleHeader} className="header">
       <img className="logo" src={logo} alt="ggg" />
-      <div className="container">
+      <div className="Header-container">
         <div className="item">
           <a href="/">о компании</a>
         </div>
