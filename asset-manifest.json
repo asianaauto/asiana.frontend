@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/asiana.frontend/static/css/main.f5dda8b4.chunk.css",
-    "main.js": "/asiana.frontend/static/js/main.0543258a.chunk.js",
-    "main.js.map": "/asiana.frontend/static/js/main.0543258a.chunk.js.map",
+    "main.css": "/asiana.frontend/static/css/main.71dbfac8.chunk.css",
+    "main.js": "/asiana.frontend/static/js/main.f9f14c6c.chunk.js",
+    "main.js.map": "/asiana.frontend/static/js/main.f9f14c6c.chunk.js.map",
     "runtime-main.js": "/asiana.frontend/static/js/runtime-main.52a2d852.js",
     "runtime-main.js.map": "/asiana.frontend/static/js/runtime-main.52a2d852.js.map",
     "static/css/2.2887fef9.chunk.css": "/asiana.frontend/static/css/2.2887fef9.chunk.css",
-    "static/js/2.cd2fd8f2.chunk.js": "/asiana.frontend/static/js/2.cd2fd8f2.chunk.js",
-    "static/js/2.cd2fd8f2.chunk.js.map": "/asiana.frontend/static/js/2.cd2fd8f2.chunk.js.map",
+    "static/js/2.6f40fec7.chunk.js": "/asiana.frontend/static/js/2.6f40fec7.chunk.js",
+    "static/js/2.6f40fec7.chunk.js.map": "/asiana.frontend/static/js/2.6f40fec7.chunk.js.map",
     "index.html": "/asiana.frontend/index.html",
     "static/css/2.2887fef9.chunk.css.map": "/asiana.frontend/static/css/2.2887fef9.chunk.css.map",
-    "static/css/main.f5dda8b4.chunk.css.map": "/asiana.frontend/static/css/main.f5dda8b4.chunk.css.map",
-    "static/js/2.cd2fd8f2.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.cd2fd8f2.chunk.js.LICENSE.txt",
+    "static/css/main.71dbfac8.chunk.css.map": "/asiana.frontend/static/css/main.71dbfac8.chunk.css.map",
+    "static/js/2.6f40fec7.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.6f40fec7.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/asiana.frontend/static/media/PTS55F.82543fd7.ttf",
     "static/media/Poprobui370x370.9c92ec98.jpg": "/asiana.frontend/static/media/Poprobui370x370.9c92ec98.jpg",
     "static/media/Shinomontag370x370 (1).c70bec34.jpg": "/asiana.frontend/static/media/Shinomontag370x370 (1).c70bec34.jpg",
     "static/media/HeatherPreview.scss": "/asiana.frontend/static/media/header.e39bb05f.jpg",
@@ -20,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.52a2d852.js",
     "static/css/2.2887fef9.chunk.css",
-    "static/js/2.cd2fd8f2.chunk.js",
-    "static/css/main.f5dda8b4.chunk.css",
-    "static/js/main.0543258a.chunk.js"
+    "static/js/2.6f40fec7.chunk.js",
+    "static/css/main.71dbfac8.chunk.css",
+    "static/js/main.f9f14c6c.chunk.js"
   ]
 }
