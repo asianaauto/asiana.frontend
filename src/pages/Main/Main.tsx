@@ -17,19 +17,6 @@ interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
-const navs = [
-  {
-    id: 1,
-    label: 'Label',
-    link: '/',
-  },
-  {
-    id: 2,
-    label: 'Label',
-    link: '/',
-  },
-];
-
 const Main: FC<IProps> = () => {
   return (
     <div className="Main-pages">
@@ -45,6 +32,7 @@ const Main: FC<IProps> = () => {
       <section className="Main-border">
         <section className="Main-section-section">
           <iframe
+            title=""
             className="Main-iframe"
             width="560"
             height="315"

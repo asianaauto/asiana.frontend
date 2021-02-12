@@ -3,6 +3,10 @@ import './Footer.scss';
 import { COLORS } from '../../constants';
 import ASIANAwhite from '../../assets/ASIANA-white.png';
 import { BiPhone, BiUser } from 'react-icons/bi';
+import vk from '../../assets/VK.png';
+import Twitter from '../../assets/Twitter.png';
+import YouTube from '../../assets/YouTube.png';
+import OK from '../../assets/OK.png';
 
 interface IExternalProps {}
 
@@ -199,6 +203,24 @@ const Footer: FC<IProps> = () => {
                 <p>8 (960) 283 77 75</p>
               </div>
             </div>
+            <div className="Footer-icon-block">
+              <div>
+                <img className="Footer-icon" src={vk} alt="" />
+              </div>
+
+              <div>
+                <img className="Footer-icon" src={Twitter} alt="" />
+              </div>
+
+              <div>
+                <img className="Footer-icon" src={YouTube} alt="" />
+              </div>
+
+              <div>
+                <img src={OK} alt="" />
+              </div>
+            </div>
+
             <div>
               <p className="Footer-item">
                 Разработка и программинг сайта <br /> агентство интернет-решений{' '}
