@@ -23,3 +23,9 @@
 .td-line {
   text-decoration: underline !important;
 }
+
+.container {
+  max-width: 1200px;
+  width: 70%;
+  margin: 0 auto;
+}
