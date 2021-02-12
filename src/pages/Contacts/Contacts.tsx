@@ -14,7 +14,7 @@ interface IProps extends IExternalProps {}
 
 const Contacts: FC<IProps> = () => {
   return (
-    <div>
+    <div className="page-with-header">
       <Header />
       <SubHeader />
       <div className="container">

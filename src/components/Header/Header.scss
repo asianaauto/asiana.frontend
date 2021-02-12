@@ -1,19 +1,45 @@
 .Header-container {
   display: flex;
   justify-content: space-around;
-  margin-left: 60px;
+  margin-left: 20px;
   align-items: center;
 }
 
 .logo {
-  height: 50px;
-  width: 210px;
-  padding-left: 180px;
+  height: 45px;
+  width: 180px;
+}
+
+.sign-in--button {
+  padding-right: 0;
+
+  .sign-in--label {
+    color: #191919;
+    font-weight: bold;
+    margin-right: 7px;
+    transition: 0.3s;
+  }
+
+  svg {
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .sign-in--label {
+      color: orangered;
+    }
+
+    svg {
+      color: orangered !important;
+    }
+  }
 }
 
 .header {
   display: flex;
-  padding: 10px 0;
+  padding: 5px 60px;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   left: 0;
   right: 0;
@@ -21,12 +47,12 @@
   z-index: 100;
 }
 
-.item {
+.Header-nav--item {
   padding-left: 30px;
 
   a {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 900;
     color: #191919;
     text-decoration: none;
 

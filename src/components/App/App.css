@@ -1,7 +1,20 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../../assets/fonts/PTS55F.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+.page-with-header {
+  padding-top: 60px;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .d-block {
@@ -22,6 +35,10 @@
 
 .td-line {
   text-decoration: underline !important;
+}
+
+.d-flex {
+  display: flex !important;
 }
 
 .container {

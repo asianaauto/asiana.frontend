@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { BiMap, BiPhone, BiUser, BiArchive, BiTaxi } from 'react-icons/bi';
+import { BiMap, BiPhone, BiCart, BiTaxi } from 'react-icons/bi';
 import { COLORS } from '../../constants';
 import './SubHeader.scss';
 
@@ -13,7 +13,7 @@ const SubHeader: FC<IProps> = () => {
   };
   return (
     <div style={styleSubHeader} className="SubHeader">
-      <div className="block">
+      <div className="SubHeader-container">
         <div className="SubHeader-block">
           <BiMap color={COLORS.orange} size={28} />
           <div className="SubHeader-item">
@@ -29,20 +29,7 @@ const SubHeader: FC<IProps> = () => {
             <p>8 (960) 283 77 75</p>
           </div>
           <div className="SubHeader-icon">
-            <BiUser color={COLORS.orange} size={28} />
-          </div>
-          <div className="SubHeader-item">
-            <a href="/">вход</a>
-          </div>
-          <div className="SubHeader-item mx-1">
-            <p>/</p>
-          </div>
-          <div className="SubHeader-item">
-            <a href="/">регистрация</a>
-          </div>
-
-          <div className="SubHeader-icon">
-            <BiArchive color={COLORS.orange} size={28} />
+            <BiCart color={COLORS.orange} size={28} />
           </div>
           <div className="SubHeader-icon">
             <BiTaxi color={COLORS.orange} size={28} />

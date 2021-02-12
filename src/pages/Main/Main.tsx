@@ -19,7 +19,7 @@ interface IProps extends IExternalProps {}
 
 const Main: FC<IProps> = () => {
   return (
-    <div className="Main-pages">
+    <div className="page-with-header">
       <Header />
       <SubHeader />
       <HeatherPreview />
@@ -32,7 +32,7 @@ const Main: FC<IProps> = () => {
       <section className="Main-border">
         <section className="Main-section-section">
           <iframe
-            title=""
+            title="main"
             className="Main-iframe"
             width="560"
             height="315"
