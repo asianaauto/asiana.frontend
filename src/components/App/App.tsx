@@ -5,6 +5,7 @@ import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import Main from '../../pages/Main/Main';
 import News from '../../pages/News/News';
+import CorporateNews from '../../pages/CorporateNews/CorporateNews';
 
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
-        <Route path="/">
+        <Route exact path="/news">
           <News />
+        </Route>
+        <Route path="/corporate-news">
+          <CorporateNews />
         </Route>
       </Switch>
     </Router>
