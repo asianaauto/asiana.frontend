@@ -4,6 +4,7 @@ import './App.css';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import Main from '../../pages/Main/Main';
+import News from '../../pages/News/News';
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
         <Route path="/contacts">
           <Contacts />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Main />
+        </Route>
+        <Route path="/">
+          <News />
         </Route>
       </Switch>
     </Router>
