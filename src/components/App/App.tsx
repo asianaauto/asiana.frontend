@@ -4,6 +4,7 @@ import './App.css';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import Main from '../../pages/Main/Main';
+import Vacancies from '../../pages/Vacancies/Vacancies';
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
         <Route path="/contacts">
           <Contacts />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Main />
+        </Route>
+        <Route path="/vacancies">
+          <Vacancies />
         </Route>
       </Switch>
     </Router>
