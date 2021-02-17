@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import Header from '../../components/Header/Header';
-import SubHeader from '../../components/SubHeader/SubHeader';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import HeatherPreview from '../../components/HeatherPreview/HeatherPreview';
 import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
@@ -20,8 +19,8 @@ interface IProps extends IExternalProps {}
 const Main: FC<IProps> = () => {
   return (
     <div className="page-with-header">
+      <FloatingFooter />
       <Header />
-      <SubHeader />
       <HeatherPreview />
       <BlockWithIcons />
       <FloatingButton />
@@ -214,7 +213,6 @@ const Main: FC<IProps> = () => {
       </section>
       <Map className="Main-map" />
       <Footer />
-      <FloatingFooter />
     </div>
   );
 };

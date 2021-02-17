@@ -6,7 +6,7 @@ interface IExternalProps {
   color?: string;
   bgColor?: string;
   customStyles?: { [key: string]: string | number };
-  onClick?: () => void;
+  onClick?: (e?: any) => void;
   onMouseMove?: (e: any) => void;
   onMouseOut?: (e: any) => void;
   className?: string;

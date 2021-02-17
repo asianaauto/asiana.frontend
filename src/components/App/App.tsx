@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
+import './App.scss';
+import 'antd/dist/antd.css';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import AboutCompany from '../../pages/AboutCompany/AboutCompany';
 import Main from '../../pages/Main/Main';
-import FloatingButton from '../../components/FloatingButton/FloatingButton';
 
 function App() {
   return (
@@ -24,7 +24,6 @@ function App() {
           <Main />
         </Route>
       </Switch>
-      <FloatingButton />
     </Router>
   );
 }
