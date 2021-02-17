@@ -1,0 +1,110 @@
+.AboutCompany-block {
+  display: flex;
+  margin-top: 30px;
+}
+
+.AboutCompany-title {
+  font-size: 21px;
+  padding-top: 30px;
+}
+
+.AboutCompany-container {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.AboutCompany-p {
+  padding-top: 20px;
+}
+
+.AboutCompany-breadcrumbs-title {
+  margin-bottom: 30px;
+}
+
+.AboutCompany-leftSidebar-button-title {
+  display: flex;
+  justify-content: center;
+}
+
+.AboutCompany-link {
+  color: red;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: none;
+    color: rgb(214, 25, 25);
+  }
+}
+
+.AboutCompany-title-h2 {
+  font-size: 19px;
+  padding-bottom: 20px;
+}
+
+.AboutCompany-title-h3 {
+  font-size: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.AboutCompany-leftSidebar-button {
+  padding-right: 40px;
+}
+
+.AboutCompany-button {
+  height: 50px;
+  width: 260px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.AboutCompany-button-block {
+  padding-top: 40px;
+}
+
+.AboutCompany-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.AboutCompany-title-block-p {
+  padding-bottom: 20px;
+}
+
+p {
+  line-height: 25px;
+}
+
+.AboutCompany-leninskiy {
+  height: 267px;
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 270px;
+}
+
+.AboutCompany-icon {
+  height: 133px;
+  width: 200px;
+  padding-left: 5px;
+}
+
+.AboutCompany-block-icon {
+  padding-left: 260px;
+}
+
+.AboutCompany-block-icon-two {
+  padding-left: 160px;
+  padding-bottom: 30px;
+}
+
+.AboutCompany-internet_magazin {
+  height: 175px;
+  width: 250px;
+}
+
+.AboutCompany-internet_magazin-icon {
+  padding-left: 340px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

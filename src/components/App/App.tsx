@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
+import AboutCompany from '../../pages/AboutCompany/AboutCompany';
 import Main from '../../pages/Main/Main';
 import News from '../../pages/News/News';
 import CorporateNews from '../../pages/CorporateNews/CorporateNews';
+import Vacancies from '../../pages/Vacancies/Vacancies';
+import FloatingButton from '../../components/FloatingButton/FloatingButton';
 
 function App() {
   return (
@@ -25,8 +28,17 @@ function App() {
         </Route>
         <Route path="/corporate-news">
           <CorporateNews />
+        <Route path="/about-company">
+          <AboutCompany />
+        </Route>
+        <Route path="/">
+          <Main />
+        </Route>
+        <Route path="/vacancies">
+          <Vacancies />
         </Route>
       </Switch>
+      <FloatingButton />
     </Router>
   );
 }
