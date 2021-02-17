@@ -28,6 +28,7 @@ function App() {
         </Route>
         <Route path="/corporate-news">
           <CorporateNews />
+        </Route>
         <Route path="/about-company">
           <AboutCompany />
         </Route>
