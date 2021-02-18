@@ -107,13 +107,9 @@ const Header: FC<IProps> = () => {
       <Menu className="Header-dropdown-menu">
         {menu.map((item: any) => (
           <Menu.Item className="Header-dropdown-menu--item" key={item.id}>
-            <a
-              className="Header-dropdown-menu--link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={item.link}>
+            <Link className="Header-dropdown-menu--link" to={item.link}>
               {item.label}
-            </a>
+            </Link>
           </Menu.Item>
         ))}
       </Menu>
