@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { YMaps, Map, Placemark, MapProps } from 'react-yandex-maps';
 
 interface IExternalProps {}

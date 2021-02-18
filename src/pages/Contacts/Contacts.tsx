@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Tabs } from 'antd';
+import { FC, useCallback, useMemo, useState } from 'react';
+import { Dropdown, Menu, Tabs } from 'antd';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Map from '../../components/Map/Map';
 import Footer from '../../components/Footer/Footer';
@@ -8,11 +8,14 @@ import './Contacts.scss';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import {
   AiFillCar,
+  AiFillSetting,
   AiFillShop,
   AiTwotoneBank,
   AiTwotoneSetting,
 } from 'react-icons/ai';
 import ContactCard from '../../components/ContactCard/ContactCard';
+import Button from '../../components/Button/Button';
+import { COLORS } from '../../constants';
 
 const { TabPane } = Tabs;
 
@@ -20,7 +23,58 @@ interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
+const tabs = [
+  {
+    id: 1,
+    label: 'Магазины',
+    icon: <AiFillShop className="mr-2" />,
+  },
+  {
+    id: 2,
+    label: 'Автосервисы',
+    icon: <AiTwotoneSetting className="mr-2" />,
+  },
+  {
+    id: 3,
+    label: 'Автосалоны',
+    icon: <AiFillCar className="mr-2" />,
+  },
+  {
+    id: 4,
+    label: 'Отделы компании',
+    icon: <AiTwotoneBank className="mr-2" />,
+  },
+  {
+    id: 5,
+    label: 'Показать все',
+  },
+];
+
 const Contacts: FC<IProps> = () => {
+  const [activeTab, setActiveTab] = useState('1');
+
+  const handleClickMenu = useCallback(
+    (item) => {
+      setActiveTab(item.key);
+    },
+    [setActiveTab],
+  );
+
+  const activeTabMenu = useMemo(() => {
+    const activeTabMenu = tabs.find((tab) => tab.id === Number(activeTab));
+    return activeTabMenu;
+  }, [activeTab]);
+
+  const menu = (
+    <Menu activeKey={activeTab}>
+      {tabs.map((item) => (
+        <Menu.Item onClick={handleClickMenu} key={item.id}>
+          {item.label}
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
   return (
     <div className="page-with-header">
       <div className="container">
@@ -39,62 +93,37 @@ const Contacts: FC<IProps> = () => {
                 <div className="Contacts-item-div">
                   <div>
                     <div className="Contacts-item-block">
-                      <Tabs defaultActiveKey="2">
-                        <TabPane
-                          tab={
-                            <span className="d-flex align-items-center">
-                              <AiFillShop className="mr-2" />
-                              Магазины
-                            </span>
-                          }
-                          key="1">
-                          <div>
-                            <ContactCard
-                              title="Богатырский проспект"
-                              phone="+79837777983"
-                              date="пн-вс: 09:00-21:00"
-                            />
-                          </div>
-                        </TabPane>
-                        <TabPane
-                          tab={
-                            <span className="d-flex align-items-center">
-                              <AiTwotoneSetting className="mr-2" />
-                              Автосервисы
-                            </span>
-                          }
-                          key="2">
-                          Автосервисы
-                        </TabPane>
-                        <TabPane
-                          tab={
-                            <span className="d-flex align-items-center">
-                              <AiFillCar className="mr-2" />
-                              Автосалоны
-                            </span>
-                          }
-                          key="3">
-                          Автосалоны
-                        </TabPane>
-                        <TabPane
-                          tab={
-                            <span className="d-flex align-items-center">
-                              <AiTwotoneBank className="mr-2" />
-                              Отделы компании
-                            </span>
-                          }
-                          key="4">
-                          Отделы компании
-                        </TabPane>
-                        <TabPane
-                          tab={
-                            <span className="d-flex align-items-center">
-                              Показать все
-                            </span>
-                          }
-                          key="5">
-                          Показать все
-                        </TabPane>
+                      <Dropdown
+                        className="Contacts-dropdown--settings"
+                        overlay={menu}
+                        trigger={['click']}>
+                        <Button
+                          className="d-flex align-items-center"
+                          color={COLORS.orange}
+                          bgColor={COLORS.transparent}>
+                          {activeTabMenu?.label}{' '}
+                          <AiFillSetting className="ml-1" />
+                        </Button>
+                      </Dropdown>
+                      <Tabs onChange={setActiveTab} activeKey={activeTab}>
+                        {tabs.map((item) => (
+                          <TabPane
+                            tab={
+                              <span className="d-flex align-items-center">
+                                {item.icon}
+                                {item.label}
+                              </span>
+                            }
+                            key={item.id}>
+                            <div>
+                              <ContactCard
+                                title="Богатырский проспект"
+                                phone="+79837777983"
+                                date="пн-вс: 09:00-21:00"
+                              />
+                            </div>
+                          </TabPane>
+                        ))}
                       </Tabs>
                       <h2 className="Contacts-h2 mt-5">
                         КОМПАНИЯ "КОРЕАНА" В САНКТ-ПЕТЕРБУРГЕ

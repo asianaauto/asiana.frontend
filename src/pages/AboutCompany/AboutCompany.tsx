@@ -1,8 +1,7 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './AboutCompany.scss';
-import Header from '../../components/Header/Header';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import Button from '../../components/Button/Button';
@@ -231,7 +230,6 @@ const AboutCompany: FC<IProps> = () => {
           </div>
         </div>
       </div>
-
       <Footer />
       <FloatingFooter />
     </div>

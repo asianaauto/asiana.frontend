@@ -1,6 +1,4 @@
-import React, { FC } from 'react';
-import Header from '../../components/Header/Header';
-import FloatingButton from '../../components/FloatingButton/FloatingButton';
+import { FC } from 'react';
 import HeatherPreview from '../../components/HeatherPreview/HeatherPreview';
 import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
 import MainNews from '../../components/MainNews/MainNews';

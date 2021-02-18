@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './BlockWithIcons.scss';
 import SpareParts from '../../assets/SpareParts.png';
 import CarService from '../../assets/CarService.png';

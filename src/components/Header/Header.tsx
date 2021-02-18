@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import './Header.scss';
 import logo from '../../assets/logotype.png';
 import orangeLogo from '../../assets/orange-logo.png';

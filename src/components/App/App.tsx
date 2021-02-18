@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,8 +12,9 @@ import AboutCompany from '../../pages/AboutCompany/AboutCompany';
 import Main from '../../pages/Main/Main';
 import News from '../../pages/News/News';
 import Vacancies from '../../pages/Vacancies/Vacancies';
+import FloatingButton from '../../components/FloatingButton/FloatingButton';
+import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
 import Header from '../Header/Header';
-import FloatingButton from '../FloatingButton/FloatingButton';
 
 function App() {
   return (
@@ -37,8 +37,11 @@ function App() {
         <Route exact path="/about-company">
           <AboutCompany />
         </Route>
-        <Route exact path="/vacancies">
+        <Route path="/vacancies">
           <Vacancies />
+        </Route>
+        <Route path="/delivery-in-russia">
+          <DeliveryInRussia />
         </Route>
         <Redirect to="/" />
       </Switch>

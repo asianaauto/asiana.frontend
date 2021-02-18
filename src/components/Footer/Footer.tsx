@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './Footer.scss';
 import { COLORS } from '../../constants';
 import ASIANAwhite from '../../assets/ASIANA-white.png';
