@@ -33,6 +33,14 @@
   font-size: 12px !important;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
 .td-line {
   text-decoration: underline !important;
 }

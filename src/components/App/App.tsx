@@ -9,6 +9,7 @@ import News from '../../pages/News/News';
 import CorporateNews from '../../pages/CorporateNews/CorporateNews';
 import Vacancies from '../../pages/Vacancies/Vacancies';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
+import CarService from '../../pages/CarService/CarService';
 import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path="/vacancies">
           <Vacancies />
+        </Route>
+        <Route path="/car-service">
+          <CarService />
         </Route>
         <Route path="/delivery-in-russia">
           <DeliveryInRussia />
