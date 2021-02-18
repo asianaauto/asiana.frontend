@@ -89,6 +89,16 @@
 
 .Header-burger--container {
   display: none;
+  .ant-collapse-content-box {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .ant-collapse-header {
+    padding: 0px 17px !important;
+    .ant-collapse-arrow {
+      padding: 0 !important;
+    }
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -162,7 +172,9 @@
     }
 
     .Header-burger-menu--panel-link {
-      padding-left: 1px;
+      padding-left: 10px;
+      display: block;
+      padding-top: 10px;
     }
   }
 

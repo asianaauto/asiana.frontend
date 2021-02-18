@@ -3,7 +3,6 @@ import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './AboutCompany.scss';
 import Header from '../../components/Header/Header';
-import SubHeader from '../../components/SubHeader/SubHeader';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import Button from '../../components/Button/Button';
@@ -23,9 +22,6 @@ interface IProps extends IExternalProps {}
 const AboutCompany: FC<IProps> = () => {
   return (
     <div className="page-with-header">
-      <Header />
-      <SubHeader />
-
       <div className="AboutCompany-container">
         <div>
           <div className="AboutCompany-breadcrumbs-title">
@@ -136,14 +132,14 @@ const AboutCompany: FC<IProps> = () => {
               </div>
 
               <div className="AboutCompany-block-icon">
-                <img className="AboutCompany-icon" src={imgicon} alt="" />
-                <img className="AboutCompany-icon" src={van} alt="" />
+                <img className="AboutCompany-image" src={imgicon} alt="" />
+                <img className="AboutCompany-image" src={van} alt="" />
               </div>
 
               <div className="AboutCompany-block-icon-two">
-                <img className="AboutCompany-icon" src={service} alt="" />
-                <img className="AboutCompany-icon" src={auto_master} alt="" />
-                <img className="AboutCompany-icon" src={reception} alt="" />
+                <img className="AboutCompany-image" src={service} alt="" />
+                <img className="AboutCompany-image" src={auto_master} alt="" />
+                <img className="AboutCompany-image" src={reception} alt="" />
               </div>
 
               <div>
@@ -171,9 +167,9 @@ const AboutCompany: FC<IProps> = () => {
                 </p>
               </div>
 
-              <div className="AboutCompany-internet_magazin-icon">
+              <div>
                 <img
-                  className="AboutCompany-internet_magazin"
+                  className="AboutCompany-leninskiy"
                   src={internet_magazin}
                   alt=""
                 />

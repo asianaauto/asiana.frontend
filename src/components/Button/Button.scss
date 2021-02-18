@@ -1,6 +1,7 @@
 .button {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   margin: 0;
   text-align: center;

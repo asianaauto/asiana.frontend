@@ -1,5 +1,8 @@
 .Footer-border {
   background-color: black;
+  padding-bottom: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .Footer-link {
@@ -18,16 +21,15 @@
   color: white;
 }
 
-.Footer-item {
+.Footer-copyright--link {
   color: #797979;
   font-size: 13px;
   padding-top: 20px;
 }
 
-.Footer-item-item {
+.Footer-copyright--info {
   color: #797979;
   font-size: 13px;
-  padding-top: 10px;
   line-height: 18px;
 }
 
@@ -126,4 +128,56 @@
 
 .Footer-icon {
   margin-right: 15px;
+}
+
+.Footer-links--container {
+  display: flex;
+}
+
+@media screen and (max-width: 1130px) {
+  .Footer-biUser-biPhone {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Footer-container {
+    flex-direction: column-reverse;
+  }
+
+  .Footer-copyright--block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    .Footer-copyright--item {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .Footer-copyright--block {
+    flex-direction: column;
+
+    .Footer-copyright--item {
+      margin-top: 10px;
+    }
+  }
+
+  .Footer-links--container {
+    flex-wrap: wrap;
+
+    .Footer-block {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .Footer-links--container {
+    display: none;
+  }
 }

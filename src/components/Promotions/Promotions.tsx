@@ -17,6 +17,7 @@ const Promotions: FC<IProps> = ({ title }) => {
         className="Promotions-item"
         direction="left">
         {title}
+        {/* @ts-ignore */}
       </marquee>
     </div>
   );

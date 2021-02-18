@@ -36,8 +36,21 @@ interface Nav {
 const NAVS: Nav['navs'] = [
   {
     id: 1,
-    label: 'контакты',
-    link: '/contacts',
+    label: 'о компании',
+    subMenuProps: {
+      navs: [
+        {
+          id: 1,
+          link: '/about-company',
+          label: 'о компании',
+        },
+        {
+          id: 2,
+          link: '/vacancies',
+          label: 'вакансии',
+        },
+      ],
+    },
   },
   {
     id: 2,
@@ -54,8 +67,13 @@ const NAVS: Nav['navs'] = [
   },
   {
     id: 3,
-    label: 'компоненты(убрать со временем)',
-    link: '/components',
+    label: 'новости',
+    link: '/news',
+  },
+  {
+    id: 4,
+    label: 'контакты',
+    link: '/contacts',
   },
 ];
 

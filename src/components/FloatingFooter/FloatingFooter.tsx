@@ -10,15 +10,19 @@ interface IProps extends IExternalProps {}
 const FloatingFooter: FC<IProps> = () => {
   return (
     <div className="FloatingFooter-block">
-      <Button bgColor={COLORS.red} className="FloatingFooter-button-bell">
+      <Button
+        bgColor={COLORS.red}
+        className="FloatingFooter-button FloatingFooter-button-bell">
         Заказать звонок
       </Button>
-      <Button bgColor={COLORS.green} className="FloatingFooter-button-service">
+      <Button
+        bgColor={COLORS.green}
+        className="FloatingFooter-button FloatingFooter-button-service">
         Запись на сервис
       </Button>
       <Button
         bgColor={COLORS.red}
-        className="FloatingFooter-button-application">
+        className="FloatingFooter-button FloatingFooter-button-application">
         Заявка на подбор запчастей
       </Button>
     </div>

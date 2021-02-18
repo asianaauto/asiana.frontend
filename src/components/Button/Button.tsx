@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import React, { FC } from 'react';
 import { COLORS } from '../../constants';
 import './Button.scss';
@@ -16,7 +17,7 @@ export interface IButtonProps extends IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
-const Button: FC<IProps> = ({
+const ButtonComponent: FC<IProps> = ({
   onClick,
   className,
   onMouseOut,
@@ -32,15 +33,15 @@ const Button: FC<IProps> = ({
   };
 
   return (
-    <button
+    <Button
       onMouseOut={onMouseOut}
       onMouseMove={onMouseMove}
       className={`button ${className}`}
       style={{ ...style, ...customStyles }}
       onClick={onClick}>
       {children}
-    </button>
+    </Button>
   );
 };
 
-export default Button;
+export default ButtonComponent;

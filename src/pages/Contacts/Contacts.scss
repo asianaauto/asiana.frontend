@@ -5,11 +5,17 @@
   height: 600px;
 }
 
+.Contacts-item--content {
+  margin: 10px 0;
+  display: block;
+}
+
 .section-leftSideBar-map {
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  align-items: flex-start;
 }
 
 .Contacts-h1 {
@@ -20,6 +26,7 @@
 .Contacts-map-container {
   display: flex;
   justify-content: center;
+  word-break: break-word;
 }
 
 .Contacts-block {
@@ -40,8 +47,8 @@
 
 .Contacts-item-block {
   display: block;
-  width: 74%;
-  margin-left: 50px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .Contacts-item-div {
@@ -59,5 +66,19 @@
   &:hover {
     text-decoration: none;
     color: rgb(214, 25, 25);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .Contacts-map {
+    min-width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .Contacts-item-div {
+    width: 90%;
+    margin: 0 auto;
   }
 }

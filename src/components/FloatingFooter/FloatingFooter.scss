@@ -29,3 +29,21 @@
     background-color: rgb(150, 13, 13) !important;
   }
 }
+
+@media screen and (max-width: 515px) {
+  .FloatingFooter-button {
+    text-transform: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .FloatingFooter-button {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .FloatingFooter-button {
+    font-size: 11px;
+  }
+}
