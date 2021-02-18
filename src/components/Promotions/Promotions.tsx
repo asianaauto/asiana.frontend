@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import { FC } from 'react';
 import './Promotions.scss';
 

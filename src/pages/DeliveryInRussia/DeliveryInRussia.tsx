@@ -2,8 +2,6 @@ import { FC } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './DeliveryInRussia.scss';
-import Header from '../../components/Header/Header';
-import SubHeader from '../../components/SubHeader/SubHeader';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import { COLORS } from '../../constants';
@@ -18,9 +16,6 @@ interface IProps extends IExternalProps {}
 const DeliveryInRussia: FC<IProps> = () => {
   return (
     <div className="page-with-header">
-      <Header />
-      <SubHeader />
-
       <div className="DeliveryInRussia-container">
         <div>
           <div className="DeliveryInRussia-breadcrumbs-title">

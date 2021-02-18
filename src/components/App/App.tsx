@@ -13,6 +13,7 @@ import Main from '../../pages/Main/Main';
 import News from '../../pages/News/News';
 import Vacancies from '../../pages/Vacancies/Vacancies';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
+import CarService from '../../pages/CarService/CarService';
 import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
 import Header from '../Header/Header';
 
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path="/vacancies">
           <Vacancies />
+        </Route>
+        <Route path="/car-service">
+          <CarService />
         </Route>
         <Route path="/delivery-in-russia">
           <DeliveryInRussia />

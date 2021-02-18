@@ -67,11 +67,29 @@ const NAVS: Nav['navs'] = [
   },
   {
     id: 3,
+    label: 'услуги автосервиса',
+    link: '/car-service',
+  },
+  {
+    id: 4,
+    label: 'предложения оптовикам',
+    subMenuProps: {
+      navs: [
+        {
+          id: 1,
+          link: '/delivery-in-russia',
+          label: 'поставки по России',
+        },
+      ],
+    },
+  },
+  {
+    id: 5,
     label: 'новости',
     link: '/news',
   },
   {
-    id: 4,
+    id: 6,
     label: 'контакты',
     link: '/contacts',
   },
