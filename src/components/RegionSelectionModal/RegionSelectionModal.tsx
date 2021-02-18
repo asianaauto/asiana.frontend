@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './RegionSelectionModal.scss';
 import Modal from '../Modal/Modal';
 

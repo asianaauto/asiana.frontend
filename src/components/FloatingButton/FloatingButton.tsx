@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { COLORS } from '../../constants';
 import './FloatingButton.scss';
 import { BiPhone } from 'react-icons/bi';

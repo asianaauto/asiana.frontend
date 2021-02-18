@@ -18,12 +18,26 @@
   height: 90px;
 }
 
+.BlockWithIcons-link {
+  display: block;
+  width: 30%;
+  color: #191919;
+  padding: 20px;
+
+  &:hover {
+    color: #ffb000;
+    background-color: #f2f2f2;
+
+    .BlockWithIcons-heading {
+      color: #ffb000;
+    }
+  }
+}
+
 .BlockWithIcons-block {
   display: flex;
-  justify-content: space-between;
   padding-right: 500px;
   padding-left: 50px;
-  padding-top: 30px;
 }
 
 .BlockWithIcons-item {
@@ -33,4 +47,47 @@
 .BlockWithIcons-heading {
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+  .BlockWithIcons-block {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .BlockWithIcons-link {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .BlockWithIcons-block {
+    background: white !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .BlockWithIcons-link {
+    min-width: 50%;
+    background-color: white;
+    box-sizing: border-box;
+    transition: 0.8s;
+
+    &:hover {
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+      z-index: 1;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .BlockWithIcons-link {
+    min-width: 100%;
+
+    .BlockWithIcons-paragraph {
+      display: none;
+    }
+  }
 }

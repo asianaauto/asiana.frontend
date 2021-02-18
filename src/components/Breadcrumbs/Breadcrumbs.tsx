@@ -1,28 +1,48 @@
+import { Breadcrumb } from 'antd';
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import './Breadcrumbs.scss';
 
-// interface IExternalProps {}
+const BreadcrumbsComponent = () => {
+  const match = useRouteMatch();
+  const routes = match.url.split('/').filter(Boolean);
 
-// interface IProps extends IExternalProps {}
+  if (!routes.length) {
+    return null;
+  }
 
-const Breadcrumbs = () => (
-  <div className="breadcrumbs">
-    <ul className="breadcrumbs-container">
-      <Route path="/:path" component={BreadcrumbsItem} />
-    </ul>
-  </div>
-);
+  const navs = routes.map((item) => {
+    let itemLabel = item;
 
-const BreadcrumbsItem = ({ match }: any) => (
-  <span>
-    <li className={match.isExact ? 'breadcrumb-active' : undefined}>
-      <Link className="breadcrumbs-Link" to={match.url || ''}>
-        {match.url}
-      </Link>
-    </li>
-    <Route path={`${match.url}/:path`} component={BreadcrumbsItem} />
-  </span>
-);
+    if (itemLabel.includes('-')) {
+      itemLabel = itemLabel.replace('-', '');
+    }
 
-export default Breadcrumbs;
+    return itemLabel
+      .split('')
+      .map((c, i) => (i === 0 ? c.toUpperCase() : c))
+      .join('');
+  });
+
+  console.log(navs);
+  return (
+    <Breadcrumb>
+      <Breadcrumb.Item>
+        <Link to="/">Главная</Link>
+      </Breadcrumb.Item>
+      {navs.map((route, index) => {
+        if (index + 1 === navs.length) {
+          return <Breadcrumb.Item key={index}>{route}</Breadcrumb.Item>;
+        }
+
+        return (
+          <Breadcrumb.Item key={index}>
+            <Link to={`/${route.toLowerCase()}`}>{route}</Link>
+          </Breadcrumb.Item>
+        );
+      })}
+    </Breadcrumb>
+  );
+};
+
+export default BreadcrumbsComponent;

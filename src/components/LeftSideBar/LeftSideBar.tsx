@@ -1,20 +1,21 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
+import { Menu } from 'antd';
 import './LeftSideBar.scss';
-// import { COLORS } from '../../constants';
+import { Link } from 'react-router-dom';
+import SubMenu from 'antd/lib/menu/SubMenu';
+
+interface IMenuItem {
+  id: number;
+  label: {
+    type?: 'title' | 'label'; // по нему будет определяться отмечать лейбл или нет
+    value: string;
+    link: string; // ссылку куда ввести
+  };
+  submenu?: Array<IMenuItem>;
+}
 
 interface IExternalProps {
-  menu?: Array<{
-    id: number;
-    label: {
-      type: 'title' | 'label'; // по нему будет определяться отмечать лейбл или нет
-      value: string;
-      link: string; // ссылку куда ввести
-    };
-    submenu?: Array<{
-      value: string;
-      link: string;
-    }>;
-  }>;
+  menu?: Array<IMenuItem>;
 }
 
 interface IProps extends IExternalProps {}
@@ -24,13 +25,25 @@ const LeftSideBarMenu: IExternalProps['menu'] = [
     id: 2,
     label: {
       type: 'title',
-      value: 'Главная',
+      value: 'Санкт-Петербург',
       link: '/',
     },
     submenu: [
       {
-        value: 'Контакты',
-        link: '/',
+        id: 1000,
+        label: {
+          type: 'label',
+          value: 'Выборг',
+          link: '/',
+        },
+      },
+      {
+        id: 1001,
+        label: {
+          type: 'label',
+          value: 'Гатчина',
+          link: '/',
+        },
       },
     ],
   },
@@ -45,21 +58,37 @@ const LeftSideBarMenu: IExternalProps['menu'] = [
 ];
 
 const LeftSideBar: FC<IProps> = () => {
-  return (
-    <div>
-      {LeftSideBarMenu.map((item, key) => (
-        <div>
-          <div className="LeftSideBar-Menu">{item.label.value}</div>
+  const renderSubmenu = (item: IMenuItem) => {
+    return item.submenu?.map(renderMenu);
+  };
 
-          <div>
-            {' '}
-            {item.submenu?.map((item, key) => (
-              <div className="LeftSideBar-submenu"> {item.value} </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
+  const renderMenu = (item: IMenuItem, key: number) => {
+    const className =
+      item.label.type === 'title'
+        ? 'LeftSideBar-title LeftSideBar-item'
+        : 'LeftSideBar-item';
+
+    if (!item.submenu) {
+      return (
+        <Menu.Item key={key}>
+          <Link className={className} to={item.label.link}>
+            {item.label.value}
+          </Link>
+        </Menu.Item>
+      );
+    }
+
+    return (
+      <SubMenu className={className} key={key} title={item.label.value}>
+        {renderSubmenu(item)}
+      </SubMenu>
+    );
+  };
+
+  return (
+    <Menu className="LeftSideBar" mode="inline">
+      {LeftSideBarMenu.map(renderMenu)}
+    </Menu>
   );
 };
 

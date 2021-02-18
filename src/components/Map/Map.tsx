@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { YMaps, Map, Placemark, MapProps } from 'react-yandex-maps';
 
 interface IExternalProps {}
@@ -18,8 +18,8 @@ const coordinates = [
 const MapComponent: FC<IProps> = (props) => (
   <YMaps>
     <Map defaultState={mapData} {...props}>
-      {coordinates.map((coordinate) => (
-        <Placemark geometry={coordinate} />
+      {coordinates.map((coordinate, index) => (
+        <Placemark key={index} geometry={coordinate} />
       ))}
     </Map>
   </YMaps>

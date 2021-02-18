@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './BlockWithIcons.scss';
 import SpareParts from '../../assets/SpareParts.png';
 import CarService from '../../assets/CarService.png';
 import CarsForSale from '../../assets/CarsForSale.png';
 import ForWholesalers from '../../assets/ForWholesalers.png';
 import { COLORS } from '../../constants';
+import { Link } from 'react-router-dom';
 
 interface IExternalProps {}
 
@@ -16,57 +17,60 @@ const BlockWithIcons: FC<IProps> = () => {
   };
   return (
     <div style={ColorsBlockWithIcons} className="BlockWithIcons-block">
-      <div className="BlockWithIcons-item">
-        <img
-          className="BlockWithIcons-SparePartsstyle"
-          src={SpareParts}
-          alt=""
-        />
-        <h1 className="BlockWithIcons-heading">Запчасти</h1>
-        <p>
-          Ассортимент, цены <br /> запчастей и аксессуаров в <br /> розничных
-          магазинах(при <br /> наличии магазина в вашем <br /> регионе). Покупка{' '}
-          <br /> необходимого товаров в <br /> интернет-магазине.{' '}
-        </p>
-      </div>
-      <div className="BlockWithIcons-item">
-        <img
-          className="BlockWithIcons-CarServicestyle"
-          src={CarService}
-          alt=""
-        />
-        <h1 className="BlockWithIcons-heading">Автосервис</h1>
-        <p>
-          Ассортимент, <br /> цены запчастей и <br /> аксессуаров в <br />{' '}
-          розничных магазинах.{' '}
-        </p>
-      </div>
-      <div className="BlockWithIcons-item">
-        <img
-          className="BlockWithIcons-CarsForSalestyle"
-          src={CarsForSale}
-          alt=""
-        />
-        <h1 className="BlockWithIcons-heading">
-          Автомобили с <br /> спробегом
-        </h1>
-        <p>
-          Ассортимент, <br /> цены запчастей и <br /> аксессуаров в <br />{' '}
-          розничных магазинах.{' '}
-        </p>
-      </div>
-      <div className="BlockWithIcons-item">
-        <img
-          className="BlockWithIcons-ForWholesalersstyle"
-          src={ForWholesalers}
-          alt=""
-        />
-        <h1 className="BlockWithIcons-heading">Оптовикам</h1>
-        <p>
-          Ассортимент, <br /> цены запчастей и <br /> аксессуаров в <br />{' '}
-          розничных магазинах.{' '}
-        </p>
-      </div>
+      <Link className="BlockWithIcons-link" to="/">
+        <div className="BlockWithIcons-item">
+          <img
+            className="BlockWithIcons-SparePartsstyle"
+            src={SpareParts}
+            alt=""
+          />
+          <h1 className="BlockWithIcons-heading">Запчасти</h1>
+          <p className="BlockWithIcons-paragraph">
+            Ассортимент, цены запчастей и аксессуаров в розничных магазинах(при
+            наличии магазина в вашем регионе). Покупка необходимого товаров в
+            интернет-магазине.{' '}
+          </p>
+        </div>
+      </Link>
+      <Link className="BlockWithIcons-link" to="/">
+        <div className="BlockWithIcons-item">
+          <img
+            className="BlockWithIcons-CarServicestyle"
+            src={CarService}
+            alt=""
+          />
+          <h1 className="BlockWithIcons-heading">Автосервис</h1>
+          <p className="BlockWithIcons-paragraph">
+            Ассортимент, цены запчастей и аксессуаров в розничных магазинах.{' '}
+          </p>
+        </div>
+      </Link>
+      <Link className="BlockWithIcons-link" to="/">
+        <div className="BlockWithIcons-item">
+          <img
+            className="BlockWithIcons-CarsForSalestyle"
+            src={CarsForSale}
+            alt=""
+          />
+          <h1 className="BlockWithIcons-heading">Автомобили с спробегом</h1>
+          <p className="BlockWithIcons-paragraph">
+            Ассортимент, цены запчастей и аксессуаров в розничных магазинах.{' '}
+          </p>
+        </div>
+      </Link>
+      <Link className="BlockWithIcons-link" to="/">
+        <div className="BlockWithIcons-item">
+          <img
+            className="BlockWithIcons-ForWholesalersstyle"
+            src={ForWholesalers}
+            alt=""
+          />
+          <h1 className="BlockWithIcons-heading">Оптовикам</h1>
+          <p className="BlockWithIcons-paragraph">
+            Ассортимент, цены запчастей и аксессуаров в розничных магазинах.{' '}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 };

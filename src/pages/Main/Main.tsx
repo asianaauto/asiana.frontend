@@ -1,7 +1,4 @@
-import React, { FC } from 'react';
-import Header from '../../components/Header/Header';
-import SubHeader from '../../components/SubHeader/SubHeader';
-import FloatingButton from '../../components/FloatingButton/FloatingButton';
+import { FC } from 'react';
 import HeatherPreview from '../../components/HeatherPreview/HeatherPreview';
 import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
 import MainNews from '../../components/MainNews/MainNews';
@@ -20,22 +17,18 @@ interface IProps extends IExternalProps {}
 const Main: FC<IProps> = () => {
   return (
     <div className="page-with-header">
-      <Header />
-      <SubHeader />
+      <FloatingFooter />
       <HeatherPreview />
       <BlockWithIcons />
-      <FloatingButton />
       <section>
         <MainNews />
         <Button className="Main-news-button">ПОКАЗАТЬ ВСЕ НОВОСТИ</Button>
       </section>
       <section className="Main-border">
-        <section className="Main-section-section">
+        <section className="Main-video--section">
           <iframe
             title="main"
             className="Main-iframe"
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/Z44wvK2g544"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,115 +61,21 @@ const Main: FC<IProps> = () => {
           </div>
         </section>
       </section>
-      <section>
-        <h3 className="Main-header-h3">
-          ПОЧЕМУ ВЛАДЕЛЬЦЫ КОРЕЙСКИХ АВТОМОБИЛЕЙ ВЫБИРАЮТ КОМПАНИЮ{' '}
-          <p className="Main-text-color"> «КОРЕАНА»</p>?
-        </h3>
-      </section>
-      <section className="Main-section-section-section">
-        <div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>
-              Прямые поставки автозапчастей и аксессуаров для корейских
-              автомобилей на рынок Российской Федерации.
-            </p>
-          </div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>
-              Широкая сеть розничных магазинов, а также интернет-магазин с
-              доставкой товаров по всей территории России.
-            </p>
-          </div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>
-              Огромный ассортимент запчастей для корейских автомобилей на
-              собственных складах.
-            </p>
-          </div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>Запчасти с минимальной наценкой.</p>
-          </div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>Гарантия на приобретённые запчасти.</p>
-          </div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>
-              Сеть технических центров по ремонту и обслуживанию корейских
-              автомобилей.
-            </p>
-          </div>
-          <div className="Main-icon">
-            <div className="Main-block--icon">
-              <BiChevronRight color={COLORS.red} size={30} />
-            </div>
-            <p>
-              В регионах, где присутствуют наши профессиональные технические
-              центры, автовладелец имеет возможность получить комплекс услуг
-              "запчасти + сервис".
-            </p>
-          </div>
-        </div>
-        <div>
-          <div className="Main-text-block">
-            <div className="Main-icon">
-              <div className="Main-block--icon">
-                <BiChevronRight color={COLORS.red} size={30} />
-              </div>
-              <p>Наличие автозапчастей отображается в режиме On-line.</p>
-            </div>
-            <div className="Main-icon">
-              <div className="Main-block--icon">
-                <BiChevronRight color={COLORS.red} size={30} />
-              </div>
-              <p>Оригинальные каталоги запчастей на нашем сайте.</p>
-            </div>
-            <div className="Main-icon">
-              <div className="Main-block--icon">
-                <BiChevronRight color={COLORS.red} size={30} />
-              </div>
-              <p>Наличие службы контроля качества обслуживания клиентов.</p>
-            </div>
+      <div className="Main-container">
+        <section>
+          <h3 className="Main-header-h3">
+            ПОЧЕМУ ВЛАДЕЛЬЦЫ КОРЕЙСКИХ АВТОМОБИЛЕЙ ВЫБИРАЮТ КОМПАНИЮ «КОРЕАНА»?{' '}
+          </h3>
+        </section>
+        <section className="Main-about-company">
+          <div>
             <div className="Main-icon">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
               <p>
-                Пунктами выдачи заказов являются как розничные магазины компании
-                "Кореана", так и пункты выдачи транспортных компаний СДЭК и DPD.
-              </p>
-            </div>
-            <div className="Main-icon">
-              <div className="Main-block--icon">
-                <BiChevronRight color={COLORS.red} size={30} />
-              </div>
-              <p>Выгодная дисконтная программа.</p>
-            </div>
-            <div className="Main-icon">
-              <div className="Main-block--icon">
-                <BiChevronRight color={COLORS.red} size={30} />
-              </div>
-              <p>
-                Официальный дистрибьютор компаний - производителей: Mando,
-                Parts-Mall, Luzar и KRAFTTECH.
+                Прямые поставки автозапчастей и аксессуаров для корейских
+                автомобилей на рынок Российской Федерации.
               </p>
             </div>
             <div className="Main-icon">
@@ -184,18 +83,114 @@ const Main: FC<IProps> = () => {
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
               <p>
-                Отличные условия для оптовых покупателей, индивидуальный подход
-                к каждому оптовику (мелкий и крупный опт).
+                Широкая сеть розничных магазинов, а также интернет-магазин с
+                доставкой товаров по всей территории России.
               </p>
             </div>
-            <div>
-              <p className="Main-text-text">
-                Ждём Вас в наших магазинах и сервисах!
+            <div className="Main-icon">
+              <div className="Main-block--icon">
+                <BiChevronRight color={COLORS.red} size={30} />
+              </div>
+              <p>
+                Огромный ассортимент запчастей для корейских автомобилей на
+                собственных складах.
+              </p>
+            </div>
+            <div className="Main-icon">
+              <div className="Main-block--icon">
+                <BiChevronRight color={COLORS.red} size={30} />
+              </div>
+              <p>Запчасти с минимальной наценкой.</p>
+            </div>
+            <div className="Main-icon">
+              <div className="Main-block--icon">
+                <BiChevronRight color={COLORS.red} size={30} />
+              </div>
+              <p>Гарантия на приобретённые запчасти.</p>
+            </div>
+            <div className="Main-icon">
+              <div className="Main-block--icon">
+                <BiChevronRight color={COLORS.red} size={30} />
+              </div>
+              <p>
+                Сеть технических центров по ремонту и обслуживанию корейских
+                автомобилей.
+              </p>
+            </div>
+            <div className="Main-icon">
+              <div className="Main-block--icon">
+                <BiChevronRight color={COLORS.red} size={30} />
+              </div>
+              <p>
+                В регионах, где присутствуют наши профессиональные технические
+                центры, автовладелец имеет возможность получить комплекс услуг
+                "запчасти + сервис".
               </p>
             </div>
           </div>
-        </div>
-      </section>
+          <div>
+            <div className="Main-text-block">
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>Наличие автозапчастей отображается в режиме On-line.</p>
+              </div>
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>Оригинальные каталоги запчастей на нашем сайте.</p>
+              </div>
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>Наличие службы контроля качества обслуживания клиентов.</p>
+              </div>
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>
+                  Пунктами выдачи заказов являются как розничные магазины
+                  компании "Кореана", так и пункты выдачи транспортных компаний
+                  СДЭК и DPD.
+                </p>
+              </div>
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>Выгодная дисконтная программа.</p>
+              </div>
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>
+                  Официальный дистрибьютор компаний - производителей: Mando,
+                  Parts-Mall, Luzar и KRAFTTECH.
+                </p>
+              </div>
+              <div className="Main-icon">
+                <div className="Main-block--icon">
+                  <BiChevronRight color={COLORS.red} size={30} />
+                </div>
+                <p>
+                  Отличные условия для оптовых покупателей, индивидуальный
+                  подход к каждому оптовику (мелкий и крупный опт).
+                </p>
+              </div>
+              <div>
+                <p className="Main-text-text">
+                  Ждём Вас в наших магазинах и сервисах!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <section>
         <h4 className="Main-header-h4">
           АДРЕСА МАГАЗИНОВ И АВТОСЕРВИСОВ САНКТ-ПЕТЕРБУРГА
@@ -204,17 +199,24 @@ const Main: FC<IProps> = () => {
       <section>
         <div></div>
       </section>
-      <section className="Main-content">
-        <BiMap color={COLORS.red} size={36} />
-        <p className="Main-score">МАГАЗИН</p>
-        <BiMap className="Main-BiMap" color={COLORS.blue} size={36} />
-        <p className="Main-car-service">АВТОСЕРВИС+МАГАЗИН</p>
-        <BiMap color={COLORS.orange} size={36} />
-        <p className="Main-car-sale">ПРОДАЖА АВТОМОБИЛЕЙ С ПРОБЕГОМ</p>
+      <section className="Main-content-map">
+        <div className="d-flex map-marker-block">
+          <BiMap color={COLORS.red} size={36} />
+          <p className="Main-score marker-label">МАГАЗИН</p>
+        </div>
+        <div className="d-flex map-marker-block">
+          <BiMap className="Main-BiMap" color={COLORS.blue} size={36} />
+          <p className="Main-car-service marker-label">АВТОСЕРВИС+МАГАЗИН</p>
+        </div>
+        <div className="d-flex map-marker-block">
+          <BiMap color={COLORS.orange} size={36} />
+          <p className="Main-car-sale marker-label">
+            ПРОДАЖА АВТОМОБИЛЕЙ С ПРОБЕГОМ
+          </p>
+        </div>
       </section>
       <Map className="Main-map" />
       <Footer />
-      <FloatingFooter />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Slider from '../Slider/Slider';
 import './HeatherPreview.scss';
 
@@ -10,7 +10,7 @@ const HeatherPreview: FC<IProps> = () => {
   return (
     <div>
       <div className="HeatherPreview-backround">
-        <div className="slider-contener">
+        <div className="slider-container">
           <Slider />
         </div>
       </div>

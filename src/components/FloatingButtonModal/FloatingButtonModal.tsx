@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Modal from '../Modal/Modal';
 import './FloatingButtonModal.scss';
 
@@ -11,8 +11,12 @@ interface IProps extends IExternalProps {}
 
 const FloatingButtonModal: FC<IProps> = ({ visible, onClose }) => {
   return (
-    <Modal className="FloatingButtonModal" visible={visible} onClose={onClose}>
-      <div className="border">
+    <Modal
+      cancelText="Отмена"
+      okText="Отправить"
+      visible={visible}
+      onClose={onClose}>
+      <div>
         <p className="FloatingButtonModal-paragraph">Ваше имя:</p>
         <input className="textField"></input>
         <p className="FloatingButtonModal-paragraph">Tелефон:</p>
@@ -23,9 +27,6 @@ const FloatingButtonModal: FC<IProps> = ({ visible, onClose }) => {
           Дополнительная информация:
         </p>
         <textarea className="textarea"></textarea>
-        <div className="submitButton">
-          <p className="FloatingButtonModal-paragraph">ОТПРАВИТЬ</p>
-        </div>
       </div>
     </Modal>
   );

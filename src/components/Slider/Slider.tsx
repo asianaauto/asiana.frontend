@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './Slider.scss';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -10,16 +10,18 @@ import Promotions from '../Promotions/Promotions';
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
-      speed: 500,
+      speed: 1000,
+      autoplaySpeed: 3000,
       slidesToShow: 1,
       slidesToScroll: 1,
+      autoplay: true,
     };
     return (
       <div className="sliderBlock">
         <div className="Promotions-contener">
-          <Promotions />
+          <Promotions title="ознакомьтесь с акциями" />
         </div>
         <Slider {...settings}>
           <div>

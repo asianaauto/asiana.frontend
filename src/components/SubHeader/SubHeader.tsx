@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { BiMap, BiPhone, BiCart, BiTaxi } from 'react-icons/bi';
 import { COLORS } from '../../constants';
 import './SubHeader.scss';
