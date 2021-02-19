@@ -3,6 +3,28 @@
   margin-top: 30px;
 }
 
+.CarService-search--input {
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+  box-sizing: border-box;
+
+  outline: none;
+
+  &:focus {
+    border: 1px solid #ffb000;
+  }
+}
+
+.CarService-search--button {
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 6px;
+  padding: 0 20px;
+}
+
 .CarService-title {
   font-size: 21px;
   padding-top: 30px;
@@ -22,11 +44,7 @@
 }
 
 .CarService-border-block {
-  border: 1px solid #ddd;
-  background-color: #f8d514;
-  padding: 25px;
-  width: 100%;
-  padding-bottom: 0;
+  display: flex;
 }
 
 .CarService-border-container {
@@ -104,29 +122,23 @@
   display: flex;
   align-items: center;
   vertical-align: middle;
-  border: 1px solid silver;
   line-height: 18px;
   padding: 8px;
   min-width: 170px;
   font-weight: 700;
   font-size: 16px;
-  color: #191919;
+  color: #ffb000 !important;
   text-align: center;
-  background-color: #eee;
+  background-color: transparent;
   text-decoration: none;
 
   &:hover {
-    background-color: rgb(214, 25, 25) !important;
+    color: #de2a1b !important;
   }
-}
-
-.CarService-biphone {
-  color: black;
 }
 
 .CarService-number {
   font-size: 16px;
-  color: black;
   font-weight: bold;
 }
 
@@ -138,4 +150,22 @@
 
 .CarService-table-head-block {
   background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 980px) {
+  .SliderCarService-icon-block {
+    padding: 0 100px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .SliderCarService-icon-block {
+    padding: 0 50px !important;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .SliderCarService-icon-block {
+    padding: 0 !important;
+  }
 }
