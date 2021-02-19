@@ -130,3 +130,9 @@ p {
   width: 45%;
   height: 45%;
 }
+
+@media screen and (max-width: 920px) {
+  .DeliveryInRussia-leftSidebar {
+    padding: 0;
+  }
+}

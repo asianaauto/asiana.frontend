@@ -7,10 +7,57 @@ import Button from '../../components/Button/Button';
 import Map from '../../components/Map/Map';
 import { BiPhone } from 'react-icons/bi';
 import SliderCarService from '../../components/SliderCarService/SliderCarService';
+import { Table } from 'antd';
+import { COLORS } from '../../constants';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
+
+const dataSource = [
+  {
+    key: '1',
+    modeWork: 'пн-вс: 09:00-21:00',
+    address: 'Народного Ополчения пр., д.201',
+    phone: '+7(812) 640-77-99',
+  },
+  {
+    key: '2',
+    modeWork: 'пн-вс: 09:00-21:00',
+    address: 'Народного Ополчения пр., д.201',
+    phone: '+7(812) 640-77-99',
+  },
+];
+
+const columns = [
+  {
+    title: 'Подразделение / Адрес',
+    dataIndex: 'address',
+    key: 'address',
+  },
+  {
+    title: 'Режим работы',
+    dataIndex: 'modeWork',
+    key: 'modeWork',
+  },
+  {
+    title: 'Телефон',
+    dataIndex: 'phone',
+    key: 'phone',
+    render() {
+      return (
+        <Button bgColor={COLORS.transparent} className="CarService-button-td">
+          {' '}
+          <BiPhone className="CarService-biphone mr-1" size={20} />{' '}
+          <span className="CarService-number">
+            {' '}
+            <b> +7(812) 640-77-99 </b>{' '}
+          </span>{' '}
+        </Button>
+      );
+    },
+  },
+];
 
 const CarService: FC<IProps> = () => {
   return (
@@ -30,18 +77,11 @@ const CarService: FC<IProps> = () => {
         </div>
 
         <div className="CarService-border-block">
-          <div className="CarService-border-container">
-            <div className="CarService-border">
-              <p>Введите название работ СТО</p>
-            </div>
-            <Button className="CarService-button">НАЙТИ</Button>
-          </div>
-          <p className="CarService-border-p">
-            Например,{' '}
-            <a className="CarService-border-linc" href="/">
-              замена свечей зажигания
-            </a>{' '}
-          </p>
+          <input
+            placeholder="Введите название СТО"
+            className="CarService-search--input"
+          />
+          <Button className="CarService-search--button">Поиск</Button>
         </div>
 
         <h2 className="CarService-title-h2">АДРЕСА СЕРВИСОВ</h2>
@@ -53,72 +93,14 @@ const CarService: FC<IProps> = () => {
         <div>
           <h3 className="CarService-title-h2">МАЛЯРНО-КУЗОВНОЙ ЦЕНТР</h3>
         </div>
-
-        <table className="CarService-simple-board">
-          <thead>
-            <tr className="CarService-table-head-block">
-              <th className="CarService-table-head">Подразделение / Адрес</th>
-              <th className="CarService-table-head"> Режим работы</th>
-              <th className="CarService-table-head">Телефон</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="CarService-table-item-block">
-              <td className="CarService-table-item">
-                Народного Ополчения пр., д.201
-              </td>
-              <td className="CarService-table-item"> пн-вс: 09:00-21:00</td>
-              <td className="CarService-table-item">
-                <div className="d-flex justify-content-start">
-                  <Button bgColor="##f1f1f1" className="CarService-button-td">
-                    {' '}
-                    <BiPhone className="CarService-biphone" size={24} />{' '}
-                    <span className="CarService-number">
-                      {' '}
-                      <b> +7(812) 640-77-99 </b>{' '}
-                    </span>{' '}
-                  </Button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Table dataSource={dataSource} columns={columns} />
 
         <h4 className="CarService-title-h2">
           {' '}
           СТАНЦИИ ТЕХНИЧЕСКОГО ОБСЛУЖИВАНИЯ
         </h4>
 
-        <table className="CarService-simple-board">
-          <thead>
-            <tr className="CarService-table-head-block">
-              <th className="CarService-table-head">Подразделение / Адрес</th>
-              <th className="CarService-table-head"> Режим работы</th>
-              <th className="CarService-table-head">Телефон</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="CarService-table-item-block">
-              <td className="CarService-table-item">
-                Народного Ополчения пр., д.201
-              </td>
-              <td className="CarService-table-item"> пн-вс: 09:00-21:00</td>
-              <td className="CarService-table-item">
-                <div className="d-flex justify-content-start">
-                  <Button bgColor="##f1f1f1" className="CarService-button-td">
-                    {' '}
-                    <BiPhone className="CarService-biphone" size={24} />{' '}
-                    <span className="CarService-number">
-                      {' '}
-                      <b> +7(812) 640-77-99 </b>{' '}
-                    </span>{' '}
-                  </Button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
+        <Table dataSource={dataSource} columns={columns} />
         <h5 className="CarService-title-h2">ГАЛЕРЕЯ НАШИХ СТО</h5>
       </div>
 
