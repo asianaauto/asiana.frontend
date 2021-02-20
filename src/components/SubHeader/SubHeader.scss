@@ -7,7 +7,7 @@
 .SubHeader-container {
   display: flex;
   justify-content: space-between;
-  padding: 4px 60px;
+  padding: 0px 60px;
   align-items: center;
 }
 
@@ -37,7 +37,6 @@
 
 .SubHeader-block {
   display: flex;
-  margin-right: 250px;
   align-items: center;
 }
 
@@ -46,4 +45,16 @@
   margin-left: 10px;
   color: #ffffff;
   text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .SubHeader-container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .SubHeader-container {
+    flex-wrap: wrap;
+  }
 }

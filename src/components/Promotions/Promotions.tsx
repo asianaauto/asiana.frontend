@@ -11,15 +11,7 @@ interface IProps extends IExternalProps {}
 const Promotions: FC<IProps> = ({ title }) => {
   return (
     <div className="Promotions-border">
-      {/* @ts-ignore */}
-      <marquee
-        hspace="5"
-        vspace="7"
-        className="Promotions-item"
-        direction="left">
-        {title}
-        {/* @ts-ignore */}
-      </marquee>
+      <div className="Promotions-item">{title}</div>
     </div>
   );
 };

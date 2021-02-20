@@ -1,13 +1,13 @@
 .Footer-border {
-  background-color: black;
+  background: radial-gradient(gray, #222222);
   padding-bottom: 70px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
 .Footer-link {
-  color: orangered;
-  font-size: 13px;
+  color: orange;
+  font-size: 14px;
   text-decoration: none;
 
   &:hover {
@@ -49,8 +49,8 @@
 }
 
 .Footer-list {
-  color: orangered;
-  font-size: 10px;
+  color: orange;
+  font-size: 12px;
   padding-left: 15px;
   padding-top: 20px;
 

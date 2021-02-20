@@ -9,8 +9,11 @@
 }
 
 .Main-header {
-  font-size: 17px;
+  font-size: 20px;
   word-break: break-word;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: 20px;
 }
 
 .Main-text {
@@ -26,7 +29,7 @@
   font-family: 'PT Sans', Arial, sans-serif;
   line-height: 1.1em;
   color: #191919;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -35,7 +38,6 @@
 .Main-border {
   border-radius: 1px;
   background-color: #f2f2f2;
-  padding-bottom: 50px;
   width: 100%;
 }
 
@@ -95,7 +97,7 @@
   font-family: 'PT Sans', Arial, sans-serif;
   line-height: 20px;
   color: #191919;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 50;
 }
 
@@ -135,28 +137,83 @@
 }
 
 .Main-section {
-  display: block;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
   padding-right: 115px;
 }
 
 .Main-iframe {
-  margin-left: 115px;
-  margin-right: 55px;
-  width: 50%;
+  width: 100%;
   height: 315px;
-  max-width: 560px;
+  max-width: 430px;
+  min-width: 430px;
 }
 
 .Main-video--section {
   display: flex;
-  padding-top: 50px;
   margin-top: 80px;
   justify-content: space-between;
 }
 
 .Main-container {
   padding: 0 100px;
+}
+
+.Main-video--container {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 217, 0, 1) 5%,
+    rgba(255, 63, 0, 1) 100%
+  );
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 40%;
+}
+
+.Main-video--block {
+  margin-right: -150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 1090px) {
+  .Main-video--section {
+    display: block;
+  }
+
+  .Main-video--container {
+    background: transparent;
+  }
+
+  .Main-video--block {
+    margin: 0 auto;
+  }
+
+  .Main-header {
+    br {
+      display: none;
+    }
+  }
+
+  .Main-video--container {
+    width: 100%;
+  }
+
+  .Main-iframe {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+  }
+
+  .Main-section {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 980px) {
