@@ -1,10 +1,16 @@
+.HeatherPreview {
+  background: linear-gradient(90deg, white 0%, #828282 200%);
+}
+
 .HeatherPreview-backround {
-  background-image: url(../../assets/header.jpg);
-  min-height: 460px;
-  background-size: cover;
+  background-image: url(../../assets/car.png);
+  min-height: 360px;
+  background-size: 100% 85%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
 
   .slider-container {
     margin-bottom: -235px;

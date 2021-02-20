@@ -8,7 +8,7 @@ interface IProps extends IExternalProps {}
 
 const HeatherPreview: FC<IProps> = () => {
   return (
-    <div>
+    <div className="HeatherPreview">
       <div className="HeatherPreview-backround">
         <div className="slider-container">
           <Slider />
