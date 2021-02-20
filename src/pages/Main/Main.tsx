@@ -18,7 +18,9 @@ const Main: FC<IProps> = () => {
   return (
     <div className="page-with-header">
       <FloatingFooter />
+
       <HeatherPreview />
+
       <BlockWithIcons />
       <section>
         <MainNews />
