@@ -4,11 +4,11 @@ import logo from '../../assets/logotype.png';
 import orangeLogo from '../../assets/orange-logo.png';
 import { COLORS } from '../../constants';
 import { Link } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Menu, Collapse } from 'antd';
 import Button from '../Button/Button';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import SubHeader from '../SubHeader/SubHeader';
 
 const { Panel } = Collapse;
 
@@ -201,60 +201,63 @@ const Header: FC<IProps> = () => {
           {renderBurgerMenu(NAVS)}
         </div>
       </div>
-      <header style={styleHeader} className="header">
-        <div className="d-flex">
-          <Link to="/">
-            <img className="logo" src={logo} alt="Logo" />
-          </Link>
-          <div className="Header-container">
-            {NAVS.map((nav) => {
-              if (nav.link) {
-                return (
-                  <div className="Header-nav--item" key={nav.id}>
-                    <Link className="Header-nav--link" to={nav.link}>
-                      {nav.label}
-                    </Link>
-                  </div>
-                );
-              }
+      <div className="Header-container--fixed">
+        <SubHeader />
+        <header style={styleHeader} className="header">
+          <div className="d-flex">
+            <Link to="/">
+              <img className="logo" src={logo} alt="Logo" />
+            </Link>
+            <div className="Header-container">
+              {NAVS.map((nav) => {
+                if (nav.link) {
+                  return (
+                    <div className="Header-nav--item" key={nav.id}>
+                      <Link className="Header-nav--link" to={nav.link}>
+                        {nav.label}
+                      </Link>
+                    </div>
+                  );
+                }
 
-              if (nav.subMenuProps?.navs) {
-                return (
-                  <div className="Header-nav--item" key={nav.id}>
-                    <DropdownMenu
-                      label={nav.label}
-                      navs={renderMenu(nav.subMenuProps.navs)}
-                    />
-                  </div>
-                );
-              }
+                if (nav.subMenuProps?.navs) {
+                  return (
+                    <div className="Header-nav--item" key={nav.id}>
+                      <DropdownMenu
+                        label={nav.label}
+                        navs={renderMenu(nav.subMenuProps.navs)}
+                      />
+                    </div>
+                  );
+                }
 
-              return null;
-            })}
+                return null;
+              })}
+            </div>
           </div>
-        </div>
-        <div className="Header-user--block">
-          <Button
+          <div className="Header-user--block">
+            {/* <Button
             className="d-flex align-items-center sign-in--button"
             bgColor={COLORS.transparent}
             color={COLORS.red}>
             <span className="sign-in--label">Войти</span>
             <FaUser color={COLORS.black} size={20} />
-          </Button>
-        </div>
-        <div className="Header-burger--button">
-          <Button
-            className="Header-burger-button"
-            onClick={handleChangeStatus(true)}
-            bgColor={COLORS.transparent}>
-            <AiOutlineMenu
+          </Button> */}
+          </div>
+          <div className="Header-burger--button">
+            <Button
               className="Header-burger-button"
-              color={COLORS.black}
-              size={25}
-            />
-          </Button>
-        </div>
-      </header>
+              onClick={handleChangeStatus(true)}
+              bgColor={COLORS.transparent}>
+              <AiOutlineMenu
+                className="Header-burger-button"
+                color={COLORS.black}
+                size={25}
+              />
+            </Button>
+          </div>
+        </header>
+      </div>
     </>
   );
 };
