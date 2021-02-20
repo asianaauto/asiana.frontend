@@ -204,57 +204,59 @@ const Header: FC<IProps> = () => {
       <div className="Header-container--fixed">
         <SubHeader />
         <header style={styleHeader} className="header">
-          <div className="d-flex">
-            <Link to="/">
-              <img className="logo" src={logo} alt="Logo" />
-            </Link>
-            <div className="Header-container">
-              {NAVS.map((nav) => {
-                if (nav.link) {
-                  return (
-                    <div className="Header-nav--item" key={nav.id}>
-                      <Link className="Header-nav--link" to={nav.link}>
-                        {nav.label}
-                      </Link>
-                    </div>
-                  );
-                }
+          <div className="header-container--size">
+            <div className="d-flex">
+              <Link to="/">
+                <img className="logo" src={logo} alt="Logo" />
+              </Link>
+              <div className="Header-container">
+                {NAVS.map((nav) => {
+                  if (nav.link) {
+                    return (
+                      <div className="Header-nav--item" key={nav.id}>
+                        <Link className="Header-nav--link" to={nav.link}>
+                          {nav.label}
+                        </Link>
+                      </div>
+                    );
+                  }
 
-                if (nav.subMenuProps?.navs) {
-                  return (
-                    <div className="Header-nav--item" key={nav.id}>
-                      <DropdownMenu
-                        label={nav.label}
-                        navs={renderMenu(nav.subMenuProps.navs)}
-                      />
-                    </div>
-                  );
-                }
+                  if (nav.subMenuProps?.navs) {
+                    return (
+                      <div className="Header-nav--item" key={nav.id}>
+                        <DropdownMenu
+                          label={nav.label}
+                          navs={renderMenu(nav.subMenuProps.navs)}
+                        />
+                      </div>
+                    );
+                  }
 
-                return null;
-              })}
+                  return null;
+                })}
+              </div>
             </div>
-          </div>
-          <div className="Header-user--block">
-            {/* <Button
-            className="d-flex align-items-center sign-in--button"
-            bgColor={COLORS.transparent}
-            color={COLORS.red}>
-            <span className="sign-in--label">Войти</span>
-            <FaUser color={COLORS.black} size={20} />
-          </Button> */}
-          </div>
-          <div className="Header-burger--button">
-            <Button
-              className="Header-burger-button"
-              onClick={handleChangeStatus(true)}
-              bgColor={COLORS.transparent}>
-              <AiOutlineMenu
+            <div className="Header-user--block">
+              {/* <Button
+              className="d-flex align-items-center sign-in--button"
+              bgColor={COLORS.transparent}
+              color={COLORS.red}>
+              <span className="sign-in--label">Войти</span>
+              <FaUser color={COLORS.black} size={20} />
+            </Button> */}
+            </div>
+            <div className="Header-burger--button">
+              <Button
                 className="Header-burger-button"
-                color={COLORS.black}
-                size={25}
-              />
-            </Button>
+                onClick={handleChangeStatus(true)}
+                bgColor={COLORS.transparent}>
+                <AiOutlineMenu
+                  className="Header-burger-button"
+                  color={COLORS.black}
+                  size={25}
+                />
+              </Button>
+            </div>
           </div>
         </header>
       </div>

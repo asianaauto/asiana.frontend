@@ -44,10 +44,15 @@
 }
 
 .header {
-  display: flex;
   padding: 5px 60px;
+}
+
+.header-container--size {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .Header-dropdown-menu {
@@ -182,7 +187,7 @@
   }
 
   .header {
-    padding: 5px 30px;
+    padding: 5px 60px;
   }
 
   .Header-container {
@@ -195,6 +200,12 @@
 
   .Header-burger--menu-header {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 5px 30px;
   }
 }
 
