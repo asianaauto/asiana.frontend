@@ -10,6 +10,38 @@ const HeatherPreview: FC<IProps> = () => {
   return (
     <div className="HeatherPreview">
       <div className="HeatherPreview-backround">
+        <div className="HeatherPreview-content">
+          <div className="pl-4">
+            <h1 className="HeatherPreview-title pl-5">
+              <em>Превосходство в деталях</em>
+            </h1>
+          </div>
+          <div className="pl-4">
+            <div className="HeatherPreview-subtitle--block pl-5">
+              <p>
+                <em>Автовладельцы стремятся</em>
+                <br />
+                <em>к обслуживанию</em>
+                <br />
+                <em>внадежном сервисе</em>
+                <br />
+              </p>
+            </div>
+          </div>
+          <div className="HeatherPreview-subtitle--hr" />
+          <div className="pl-4">
+            <div className="HeatherPreview-subtitle--block pl-5 pb-5">
+              <p>
+                <em>Специализируясь в азиатском</em>
+                <br />
+                <em>сегменте, мы знаем</em>
+                <br />
+                <em>Ваш автомобиль в деталях</em>
+                <br />
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="slider-container">
           <Slider />
         </div>
