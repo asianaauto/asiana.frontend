@@ -20,35 +20,37 @@ import Header from '../Header/Header';
 function App() {
   return (
     <Router>
-      <FloatingButton />
-      <Header />
-      <Switch>
-        <Route exact path="/components">
-          <Components />
-        </Route>
-        <Route exact path="/contacts">
-          <Contacts />
-        </Route>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route exact path="/news">
-          <News />
-        </Route>
-        <Route exact path="/about-company">
-          <AboutCompany />
-        </Route>
-        <Route path="/vacancies">
-          <Vacancies />
-        </Route>
-        <Route path="/car-service">
-          <CarService />
-        </Route>
-        <Route path="/delivery-in-russia">
-          <DeliveryInRussia />
-        </Route>
-        <Redirect to="/" />
-      </Switch>
+      <div className="container page-container--full">
+        <FloatingButton />
+        <Header />
+        <Switch>
+          <Route exact path="/components">
+            <Components />
+          </Route>
+          <Route exact path="/contacts">
+            <Contacts />
+          </Route>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route exact path="/news">
+            <News />
+          </Route>
+          <Route exact path="/about-company">
+            <AboutCompany />
+          </Route>
+          <Route path="/vacancies">
+            <Vacancies />
+          </Route>
+          <Route path="/car-service">
+            <CarService />
+          </Route>
+          <Route path="/delivery-in-russia">
+            <DeliveryInRussia />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </div>
     </Router>
   );
 }

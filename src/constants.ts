@@ -7,6 +7,7 @@ export const COLORS = {
   lightgray: '#D3D3D3',
   green: '#0ca007',
   blue: '#0000ff',
+  primary: '#309bcc',
   transparent: 'transparent',
   yellow: '#f6cb00',
   gray: '#797979',

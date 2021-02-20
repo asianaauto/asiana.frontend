@@ -198,7 +198,7 @@ const Footer: FC<IProps> = () => {
               </div>
             </div>
             <div className="Footer-biPhone">
-              <BiPhone color={COLORS.orange} size={28} />
+              <BiPhone className="mr-2" color={COLORS.orange} size={28} />
               <div className="Footer-item-Phone">
                 <p>8 (960) 283 77 75</p>
               </div>
