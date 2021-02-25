@@ -18,7 +18,7 @@
   left: 1%;
   bottom: 18%;
   z-index: 999;
-  transition: 0.3s;
+  transition: 0.1s;
   -webkit-animation: hoverWave linear 1s infinite;
   animation: hoverWave linear 1s infinite;
 }
@@ -58,17 +58,17 @@
   z-index: 1;
   background: #fff;
   color: transparent;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .callback-bt:hover .FloatingButton-icon {
   color: #de2a1b;
   font-size: 40px;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .callback-bt .FloatingButton-icon {
   color: #fff;
   font-size: 34px;
-  transition: 0.3s;
+  transition: 0.1s;
   line-height: 66px;
   transition: 0.5s ease-in-out;
 }
