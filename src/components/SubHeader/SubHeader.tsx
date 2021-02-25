@@ -14,49 +14,51 @@ interface IProps extends IExternalProps {}
 const SubHeader: FC<IProps> = () => {
   return (
     <div className="SubHeader">
-      <div className="SubHeader-container">
-        <div className="SubHeader-block">
-          <Button color={COLORS.red} bgColor={COLORS.transparent}>
-            <BiMap className="mr-2" color={COLORS.red} size={24} />
-            Санкт-Петербург
-            <DownOutlined />
-          </Button>
-        </div>
-        <div className="SubHeader-content">
-          <Button
-            className="mr-4"
-            color={COLORS.red}
-            bgColor={COLORS.transparent}>
-            <BiPhone className="mr-2" color={COLORS.red} size={24} />8 (960) 283
-            77 75
-          </Button>
-          <Button
-            className="d-flex align-items-center"
-            bgColor={COLORS.transparent}
-            color={COLORS.red}>
-            <Tooltip title="Личный кабинет">
-              <FaUserCircle color={COLORS.red} size={25} />
-            </Tooltip>
-          </Button>
-          <div className="SubHeader-icon">
-            <Button
-              className="d-flex px-0 align-items-center"
-              bgColor={COLORS.transparent}
-              color={COLORS.red}>
-              <Tooltip title="Корзина">
-                <BiCart color={COLORS.gray} size={25} />
-              </Tooltip>
+      <div className="container page-container--full">
+        <div className="SubHeader-container">
+          <div className="SubHeader-block">
+            <Button color={COLORS.red} bgColor={COLORS.transparent}>
+              <BiMap className="mr-2" color={COLORS.red} size={24} />
+              Санкт-Петербург
+              <DownOutlined />
             </Button>
           </div>
-          <div className="SubHeader-icon">
+          <div className="SubHeader-content">
             <Button
-              className="d-flex px-0 align-items-center"
+              className="mr-4"
+              color={COLORS.red}
+              bgColor={COLORS.transparent}>
+              <BiPhone className="mr-2" color={COLORS.red} size={24} />8 (960)
+              283 77 75
+            </Button>
+            <Button
+              className="d-flex align-items-center"
               bgColor={COLORS.transparent}
               color={COLORS.red}>
-              <Tooltip title="Мой гараж">
-                <BiTaxi color={COLORS.primary} size={25} />
+              <Tooltip title="Личный кабинет">
+                <FaUserCircle color={COLORS.red} size={25} />
               </Tooltip>
             </Button>
+            <div className="SubHeader-icon">
+              <Button
+                className="d-flex px-0 align-items-center"
+                bgColor={COLORS.transparent}
+                color={COLORS.red}>
+                <Tooltip title="Корзина">
+                  <BiCart color={COLORS.gray} size={25} />
+                </Tooltip>
+              </Button>
+            </div>
+            <div className="SubHeader-icon">
+              <Button
+                className="d-flex px-0 align-items-center"
+                bgColor={COLORS.transparent}
+                color={COLORS.red}>
+                <Tooltip title="Мой гараж">
+                  <BiTaxi color={COLORS.primary} size={25} />
+                </Tooltip>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

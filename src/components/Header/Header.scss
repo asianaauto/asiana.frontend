@@ -94,6 +94,26 @@
   }
 }
 
+.Header-dropdown-menu {
+  background-color: white;
+
+  .Header-dropdown-menu--item {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    .Header-dropdown-menu--link {
+      color: black !important;
+
+      &:hover {
+        color: orangered !important;
+      }
+    }
+  }
+}
+
 .Header-burger--button {
   display: none;
 }

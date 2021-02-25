@@ -196,7 +196,7 @@ const Header: FC<IProps> = () => {
       <div className="Header-container--fixed">
         <SubHeader />
         <header style={styleHeader} className="header">
-          <div className="header-container--size">
+          <div className="header-container--size container page-container--full">
             <div className="d-flex">
               <Link to="/">
                 <img className="logo" src={logo} alt="Logo" />
