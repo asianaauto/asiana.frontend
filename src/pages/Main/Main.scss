@@ -118,17 +118,9 @@
   margin-top: 20px;
 }
 
-.Main-score {
-  color: red;
-}
-
 .Main-car-service {
-  color: blue;
+  color: blacky;
   margin-right: 30px;
-}
-
-.Main-car-sale {
-  color: orange;
 }
 
 .Main-BiMap {
@@ -284,15 +276,6 @@
 @media screen and (max-width: 530px) {
   .Main-header-h4 {
     margin-top: 20px;
-  }
-
-  .Main-content-map {
-    flex-wrap: wrap;
-
-    .map-marker-block {
-      text-align: center;
-      padding: 20px;
-    }
   }
 }
 
