@@ -12,16 +12,19 @@ const FloatingFooter: FC<IProps> = () => {
     <div className="FloatingFooter-block">
       <Button
         bgColor={COLORS.red}
+        color={COLORS.orange}
         className="FloatingFooter-button FloatingFooter-button-bell">
         Заказать звонок
       </Button>
       <Button
-        bgColor={COLORS.green}
+        bgColor={COLORS.orange}
+        color={COLORS.red}
         className="FloatingFooter-button FloatingFooter-button-service">
         Запись на сервис
       </Button>
       <Button
         bgColor={COLORS.red}
+        color={COLORS.orange}
         className="FloatingFooter-button FloatingFooter-button-application">
         Заявка на подбор запчастей
       </Button>

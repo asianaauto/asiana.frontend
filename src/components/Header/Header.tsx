@@ -72,16 +72,8 @@ const NAVS: Nav['navs'] = [
   },
   {
     id: 4,
-    label: 'предложения оптовикам',
-    subMenuProps: {
-      navs: [
-        {
-          id: 1,
-          link: '/delivery-in-russia',
-          label: 'поставки по России',
-        },
-      ],
-    },
+    label: 'оптовикам',
+    link: '/delivery',
   },
   {
     id: 5,
