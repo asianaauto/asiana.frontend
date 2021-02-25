@@ -9,18 +9,20 @@
   background: #de2a1b;
   border: 2px solid #de2a1b;
   border-radius: 50%;
-  box-shadow: 0 8px 10px rgba(255, 63, 0, 1);
+  box-shadow: 0 4px 10px rgba(255, 63, 0, 1);
   cursor: pointer;
   height: 68px;
   text-align: center;
   width: 68px;
   position: fixed;
-  left: 1%;
-  bottom: 18%;
+  left: 2%;
+  bottom: 7%;
   z-index: 999;
-  transition: 0.3s;
-  -webkit-animation: hoverWave linear 1s infinite;
-  animation: hoverWave linear 1s infinite;
+  transition: 0.1s;
+  &:hover {
+    -webkit-animation: hoverWave linear 1s infinite;
+    animation: hoverWave linear 1s infinite;
+  }
 }
 
 .callback-bt .text-call {

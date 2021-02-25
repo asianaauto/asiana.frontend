@@ -1,7 +1,7 @@
 .sliderBlock {
   max-width: 260px;
   min-height: 200px;
-  background-color: red;
+  background-color: yellow;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .slick-active button:before {
-  color: #ff4200 !important;
+  color: red !important;
   padding-right: 0.1px !important;
 }
 
