@@ -163,26 +163,11 @@ const Footer: FC<IProps> = () => {
                 </li>
               </ul>
             </div>
-            <div className="Footer-block">
-              <h4 className="Footer-header">КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
-              <ul className="Footer-list">
-                <li>
-                  <a className="Footer-link" href="/">
-                    Форма обратной связи
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Вакансии
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
           <div className="Footer-biUser-biPhone">
             <div className="Footer-icon-item">
               <div className="Footer-icon">
-                <BiUser color={COLORS.red} size={28} />
+                <BiUser color={COLORS.darkRed} size={28} />
               </div>
               <div className="Footer-item-p">
                 <a href="/">вход</a>
@@ -197,7 +182,7 @@ const Footer: FC<IProps> = () => {
               </div>
             </div>
             <div className="Footer-biPhone">
-              <BiPhone className="mr-2" color={COLORS.red} size={28} />
+              <BiPhone className="mr-2" color={COLORS.darkRed} size={28} />
               <div className="Footer-item-Phone">
                 <p>8 (960) 283 77 75</p>
               </div>
@@ -221,13 +206,6 @@ const Footer: FC<IProps> = () => {
             </div>
 
             <div>
-              <p className="Footer-item">
-                Разработка и программинг сайта <br /> агентство интернет-решений{' '}
-                <br /> МОРЕ
-              </p>
-              <p className="Footer-item">
-                Дизайн и продвижение сайта <br /> интернет-агентство
-              </p>
               <a className="Footer-link mb-2 d-block fs-12 td-line" href="/">
                 Инстарком
               </a>
