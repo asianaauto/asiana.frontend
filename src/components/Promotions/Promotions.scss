@@ -1,14 +1,17 @@
 .Promotions-border {
   border-radius: 1px;
-  width: 300px;
+  max-width: 270px;
   height: 40px;
   background-color: #f6cb00;
 }
 
 .Promotions-item {
   color: red;
-  font-size: 23px;
+  font-size: 20px;
   height: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Roboto Bold';
 }

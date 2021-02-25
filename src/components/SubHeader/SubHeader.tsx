@@ -12,11 +12,8 @@ interface IExternalProps {}
 interface IProps extends IExternalProps {}
 
 const SubHeader: FC<IProps> = () => {
-  const styleSubHeader = {
-    background: COLORS.white,
-  };
   return (
-    <div style={styleSubHeader} className="SubHeader">
+    <div className="SubHeader">
       <div className="SubHeader-container">
         <div className="SubHeader-block">
           <Button color={COLORS.red} bgColor={COLORS.transparent}>
