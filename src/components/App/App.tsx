@@ -45,7 +45,7 @@ function App() {
           <Route path="/car-service">
             <CarService />
           </Route>
-          <Route path="/delivery-in-russia">
+          <Route path="/delivery">
             <DeliveryInRussia />
           </Route>
           <Redirect to="/" />
