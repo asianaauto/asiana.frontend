@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import './Footer.scss';
 import { COLORS } from '../../constants';
-import ASIANAwhite from '../../assets/ASIANA-white.png';
 import { BiPhone, BiUser } from 'react-icons/bi';
 import vk from '../../assets/VK.png';
 import Twitter from '../../assets/Twitter.png';
@@ -18,14 +17,14 @@ const Footer: FC<IProps> = () => {
       <div className="Footer-border">
         <div className="Footer-container">
           <div className="Footer-copyright--block">
-            <div>
-              <img className="Footer-img" src={ASIANAwhite} alt="" />
-            </div>
             <p className="Footer-copyright--item Footer-copyright--link">
-              Copyright © 2012-2021 Koreanaparts.ru
+              Copyright ©2021{' '}
+              <a className="Footer-link" href="/">
+                asianaauto.ru
+              </a>
             </p>
             <p className="Footer-copyright--item Footer-copyright--info">
-              Кореана.рф ООО«Альянс ЛТД» Все права защищены.
+              ООО«Альянс ЛТД» Все права защищены
             </p>
           </div>
           <div className="Footer-links--container">
@@ -183,7 +182,7 @@ const Footer: FC<IProps> = () => {
           <div className="Footer-biUser-biPhone">
             <div className="Footer-icon-item">
               <div className="Footer-icon">
-                <BiUser color={COLORS.orange} size={28} />
+                <BiUser color={COLORS.red} size={28} />
               </div>
               <div className="Footer-item-p">
                 <a href="/">вход</a>
@@ -198,7 +197,7 @@ const Footer: FC<IProps> = () => {
               </div>
             </div>
             <div className="Footer-biPhone">
-              <BiPhone className="mr-2" color={COLORS.orange} size={28} />
+              <BiPhone className="mr-2" color={COLORS.red} size={28} />
               <div className="Footer-item-Phone">
                 <p>8 (960) 283 77 75</p>
               </div>
