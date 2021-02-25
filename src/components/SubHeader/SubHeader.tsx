@@ -1,11 +1,9 @@
 import { FC } from 'react';
-import { BiMap, BiPhone, BiCart, BiTaxi } from 'react-icons/bi';
-import { Tooltip } from 'antd';
+import { BiMap, BiPhone } from 'react-icons/bi';
 import { DownOutlined } from '@ant-design/icons';
 import { COLORS } from '../../constants';
 import './SubHeader.scss';
 import Button from '../Button/Button';
-import { FaUserCircle } from 'react-icons/fa';
 
 interface IExternalProps {}
 
@@ -34,31 +32,7 @@ const SubHeader: FC<IProps> = () => {
             <Button
               className="d-flex align-items-center"
               bgColor={COLORS.transparent}
-              color={COLORS.red}>
-              <Tooltip title="Личный кабинет">
-                <FaUserCircle color={COLORS.red} size={25} />
-              </Tooltip>
-            </Button>
-            <div className="SubHeader-icon">
-              <Button
-                className="d-flex px-0 align-items-center"
-                bgColor={COLORS.transparent}
-                color={COLORS.red}>
-                <Tooltip title="Корзина">
-                  <BiCart color={COLORS.gray} size={25} />
-                </Tooltip>
-              </Button>
-            </div>
-            <div className="SubHeader-icon">
-              <Button
-                className="d-flex px-0 align-items-center"
-                bgColor={COLORS.transparent}
-                color={COLORS.red}>
-                <Tooltip title="Мой гараж">
-                  <BiTaxi color={COLORS.primary} size={25} />
-                </Tooltip>
-              </Button>
-            </div>
+              color={COLORS.red}></Button>
           </div>
         </div>
       </div>

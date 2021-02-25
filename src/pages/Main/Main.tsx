@@ -4,7 +4,7 @@ import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
 import MainNews from '../../components/MainNews/MainNews';
 import Button from '../../components/Button/Button';
 import './Main.scss';
-import { BiChevronRight, BiMap } from 'react-icons/bi';
+import { BiChevronRight } from 'react-icons/bi';
 import { COLORS } from '../../constants';
 import Map from '../../components/Map/Map';
 import Footer from '../../components/Footer/Footer';
@@ -209,22 +209,7 @@ const Main: FC<IProps> = () => {
       <section>
         <div></div>
       </section>
-      <section className="Main-content-map">
-        <div className="d-flex map-marker-block">
-          <BiMap color={COLORS.red} size={36} />
-          <p className="Main-score marker-label">МАГАЗИН</p>
-        </div>
-        <div className="d-flex map-marker-block">
-          <BiMap className="Main-BiMap" color={COLORS.blue} size={36} />
-          <p className="Main-car-service marker-label">АВТОСЕРВИС+МАГАЗИН</p>
-        </div>
-        <div className="d-flex map-marker-block">
-          <BiMap color={COLORS.orange} size={36} />
-          <p className="Main-car-sale marker-label">
-            ПРОДАЖА АВТОМОБИЛЕЙ С ПРОБЕГОМ
-          </p>
-        </div>
-      </section>
+
       <Map className="Main-map" />
       <Footer />
     </div>
