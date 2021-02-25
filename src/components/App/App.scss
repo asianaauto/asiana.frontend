@@ -57,8 +57,16 @@
   display: block;
 }
 
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
 .justify-content-between {
   justify-content: space-between;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
 }
 
 .align-items-start {
