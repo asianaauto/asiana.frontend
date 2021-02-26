@@ -20,7 +20,7 @@ import Header from '../Header/Header';
 function App() {
   return (
     <Router>
-      <div className="container page-container--full">
+      <div>
         <FloatingButton />
         <Header />
         <Switch>

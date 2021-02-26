@@ -33,102 +33,47 @@ const Footer: FC<IProps> = () => {
               <ul className="Footer-list">
                 <li>
                   <a className="Footer-link" href="/">
-                    Запчасти
+                    о компании
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Автосервис
+                    вакансии
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Адреса магазинов
+                    оптовикам
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Оптовикам
+                    контакты
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    О компании
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Контакты
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Поддержка
+                    форма обратной связи
                   </a>
                 </li>
               </ul>
             </div>
             <div className="Footer-block">
-              <h2 className="Footer-header">ИНТЕРНЕТ-МАГАЗИН</h2>
+              <h2 className="Footer-header">ЗАПЧАСТИ</h2>
               <ul className="Footer-list">
                 <li>
                   <a className="Footer-link" href="/">
-                    Договор оферты
+                    Корея
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Дисконтная программа
+                    Китай
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Способы оплаты
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Доставка заказа
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Возврат товара
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти Hyundai
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти KIA
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти Chevrolet
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти DAEWOO
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти SsangYong
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти для ТО
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти кузова
+                    Япония
                   </a>
                 </li>
               </ul>
@@ -138,27 +83,17 @@ const Footer: FC<IProps> = () => {
               <ul className="Footer-list">
                 <li>
                   <a className="Footer-link" href="/">
-                    Hyundai сервис
+                    Корея
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Kia сервис
+                    Китай
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Chevrolet сервис
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Daewoo сервис
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    SsangYong сервис
+                    Япония
                   </a>
                 </li>
               </ul>
@@ -206,9 +141,6 @@ const Footer: FC<IProps> = () => {
             </div>
 
             <div>
-              <a className="Footer-link mb-2 d-block fs-12 td-line" href="/">
-                Инстарком
-              </a>
               <a className="Footer-link d-block fs-12 td-line mb-1" href="/">
                 Политика использования файлов Cookie
               </a>
