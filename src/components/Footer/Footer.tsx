@@ -167,7 +167,7 @@ const Footer: FC<IProps> = () => {
           <div className="Footer-biUser-biPhone">
             <div className="Footer-icon-item">
               <div className="Footer-icon">
-                <BiUser color={COLORS.darkRed} size={28} />
+                <BiUser color={COLORS.black} size={28} />
               </div>
               <div className="Footer-item-p">
                 <a href="/">вход</a>
@@ -182,7 +182,7 @@ const Footer: FC<IProps> = () => {
               </div>
             </div>
             <div className="Footer-biPhone">
-              <BiPhone className="mr-2" color={COLORS.darkRed} size={28} />
+              <BiPhone className="mr-2" color={COLORS.black} size={28} />
               <div className="Footer-item-Phone">
                 <p>8 (960) 283 77 75</p>
               </div>
