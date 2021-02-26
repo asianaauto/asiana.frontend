@@ -24,7 +24,7 @@ const HeatherPreview: FC<IProps> = () => {
                   <br />
                   <em>к обслуживанию</em>
                   <br />
-                  <em>внадежном сервисе</em>
+                  <em>в надежном сервисе</em>
                   <br />
                 </p>
               </div>
