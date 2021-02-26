@@ -44,7 +44,7 @@ const BlockWithIcons: FC<IProps> = () => {
               src={ForWholesalers}
               alt=""
             />
-            <h1 className="BlockWithIcons-heading">Автосервис</h1>
+            <h1 className="BlockWithIcons-heading">Автосалон </h1>
           </div>
         </Link>
       </div>
