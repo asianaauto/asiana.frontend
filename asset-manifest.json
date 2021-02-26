@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/asiana.frontend/static/css/main.6f867798.chunk.css",
-    "main.js": "/asiana.frontend/static/js/main.af8bfbaf.chunk.js",
-    "main.js.map": "/asiana.frontend/static/js/main.af8bfbaf.chunk.js.map",
+    "main.css": "/asiana.frontend/static/css/main.c4e85878.chunk.css",
+    "main.js": "/asiana.frontend/static/js/main.e3f5f255.chunk.js",
+    "main.js.map": "/asiana.frontend/static/js/main.e3f5f255.chunk.js.map",
     "runtime-main.js": "/asiana.frontend/static/js/runtime-main.52a2d852.js",
     "runtime-main.js.map": "/asiana.frontend/static/js/runtime-main.52a2d852.js.map",
     "static/css/2.436b7c5a.chunk.css": "/asiana.frontend/static/css/2.436b7c5a.chunk.css",
-    "static/js/2.f4f323d3.chunk.js": "/asiana.frontend/static/js/2.f4f323d3.chunk.js",
-    "static/js/2.f4f323d3.chunk.js.map": "/asiana.frontend/static/js/2.f4f323d3.chunk.js.map",
+    "static/js/2.be87aa3a.chunk.js": "/asiana.frontend/static/js/2.be87aa3a.chunk.js",
+    "static/js/2.be87aa3a.chunk.js.map": "/asiana.frontend/static/js/2.be87aa3a.chunk.js.map",
     "index.html": "/asiana.frontend/index.html",
     "static/css/2.436b7c5a.chunk.css.map": "/asiana.frontend/static/css/2.436b7c5a.chunk.css.map",
-    "static/css/main.6f867798.chunk.css.map": "/asiana.frontend/static/css/main.6f867798.chunk.css.map",
-    "static/js/2.f4f323d3.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.f4f323d3.chunk.js.LICENSE.txt",
+    "static/css/main.c4e85878.chunk.css.map": "/asiana.frontend/static/css/main.c4e85878.chunk.css.map",
+    "static/js/2.be87aa3a.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.be87aa3a.chunk.js.LICENSE.txt",
     "static/media/Commandant.681d6c0c.jpg": "/asiana.frontend/static/media/Commandant.681d6c0c.jpg",
     "static/media/Industrial.9eb7cd31.jpg": "/asiana.frontend/static/media/Industrial.9eb7cd31.jpg",
     "static/media/Krasnoputilovskaya.3161a396.jpg": "/asiana.frontend/static/media/Krasnoputilovskaya.3161a396.jpg",
@@ -28,7 +28,7 @@
     "static/media/auto_master.82c5fd3c.jpg": "/asiana.frontend/static/media/auto_master.82c5fd3c.jpg",
     "static/media/besplatnaya_dostavka.6ee35738.jpg": "/asiana.frontend/static/media/besplatnaya_dostavka.6ee35738.jpg",
     "static/media/besplatnaya_dostavka_rf.dc87709c.jpg": "/asiana.frontend/static/media/besplatnaya_dostavka_rf.dc87709c.jpg",
-    "static/media/HeatherPreview.scss": "/asiana.frontend/static/media/car.c215ffe0.png",
+    "static/media/HeatherPreview.scss": "/asiana.frontend/static/media/car.48bf09bf.png",
     "static/media/dalnevostochnyy.19889b8b.jpg": "/asiana.frontend/static/media/dalnevostochnyy.19889b8b.jpg",
     "static/media/imgicon.b3e38786.png": "/asiana.frontend/static/media/imgicon.b3e38786.png",
     "static/media/internet_magazin.89abbd13.png": "/asiana.frontend/static/media/internet_magazin.89abbd13.png",
@@ -43,8 +43,8 @@
   "entrypoints": [
     "static/js/runtime-main.52a2d852.js",
     "static/css/2.436b7c5a.chunk.css",
-    "static/js/2.f4f323d3.chunk.js",
-    "static/css/main.6f867798.chunk.css",
-    "static/js/main.af8bfbaf.chunk.js"
+    "static/js/2.be87aa3a.chunk.js",
+    "static/css/main.c4e85878.chunk.css",
+    "static/js/main.e3f5f255.chunk.js"
   ]
 }
