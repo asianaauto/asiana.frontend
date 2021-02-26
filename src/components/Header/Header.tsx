@@ -49,25 +49,45 @@ const NAVS: Nav['navs'] = [
           link: '/vacancies',
           label: 'вакансии',
         },
+        {
+          id: 3,
+          label: 'новости',
+          link: '/news',
+        },
+        {
+          id: 4,
+          label: 'акции',
+          link: '/actions',
+        },
       ],
     },
   },
   {
     id: 2,
-    label: 'купить запчасти',
+    label: 'запчасти',
     subMenuProps: {
       navs: [
         {
           id: 1,
-          link: '/contacts',
-          label: 'интернет магазин',
+          link: '/corea',
+          label: 'корея',
+        },
+        {
+          id: 2,
+          link: '/chinese',
+          label: 'китай',
+        },
+        {
+          id: 3,
+          link: '/japan',
+          label: 'япония',
         },
       ],
     },
   },
   {
     id: 3,
-    label: 'услуги автосервиса',
+    label: 'авто с пробегом',
     link: '/car-service',
   },
   {
@@ -75,11 +95,7 @@ const NAVS: Nav['navs'] = [
     label: 'оптовикам',
     link: '/delivery',
   },
-  {
-    id: 5,
-    label: 'новости',
-    link: '/news',
-  },
+
   {
     id: 6,
     label: 'контакты',
