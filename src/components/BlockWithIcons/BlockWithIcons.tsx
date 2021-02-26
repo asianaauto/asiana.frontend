@@ -25,11 +25,6 @@ const BlockWithIcons: FC<IProps> = () => {
               alt=""
             />
             <h1 className="BlockWithIcons-heading">Запчасти</h1>
-            <p className="BlockWithIcons-paragraph">
-              Ассортимент, цены запчастей и аксессуаров в розничных
-              магазинах(при наличии магазина в вашем регионе). Покупка
-              необходимого товаров в интернет-магазине.{' '}
-            </p>
           </div>
         </Link>
         <Link className="BlockWithIcons-link" to="/">
@@ -40,9 +35,6 @@ const BlockWithIcons: FC<IProps> = () => {
               alt=""
             />
             <h1 className="BlockWithIcons-heading">Автосервис</h1>
-            <p className="BlockWithIcons-paragraph">
-              Ассортимент, цены запчастей и аксессуаров в розничных магазинах.{' '}
-            </p>
           </div>
         </Link>
         <Link className="BlockWithIcons-link" to="/">
@@ -52,10 +44,7 @@ const BlockWithIcons: FC<IProps> = () => {
               src={ForWholesalers}
               alt=""
             />
-            <h1 className="BlockWithIcons-heading">Оптовикам</h1>
-            <p className="BlockWithIcons-paragraph">
-              Ассортимент, цены запчастей и аксессуаров в розничных магазинах.{' '}
-            </p>
+            <h1 className="BlockWithIcons-heading">Автосервис</h1>
           </div>
         </Link>
       </div>
