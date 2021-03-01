@@ -1,13 +1,19 @@
 import { Col, Row } from 'antd';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import action from '../../assets/Poprobui370x370.jpg';
 import './Action.scss';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const Action: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="bg-white">
       <div className="container page-with-header">

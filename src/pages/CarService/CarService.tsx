@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
@@ -9,6 +9,8 @@ import { BiPhone } from 'react-icons/bi';
 import SliderCarService from '../../components/SliderCarService/SliderCarService';
 import { Table } from 'antd';
 import { COLORS } from '../../constants';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
@@ -60,6 +62,10 @@ const columns = [
 ];
 
 const CarService: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="container">

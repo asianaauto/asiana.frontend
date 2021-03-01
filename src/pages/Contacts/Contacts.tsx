@@ -1,4 +1,4 @@
-import { FC, useCallback, useMemo, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { Dropdown, Menu, Tabs } from 'antd';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Map from '../../components/Map/Map';
@@ -16,6 +16,8 @@ import {
 import ContactCard from '../../components/ContactCard/ContactCard';
 import Button from '../../components/Button/Button';
 import { COLORS } from '../../constants';
+// @ts-ignore
+import WOW from 'wowjs';
 
 const { TabPane } = Tabs;
 
@@ -51,6 +53,10 @@ const tabs = [
 ];
 
 const Contacts: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   const [activeTab, setActiveTab] = useState('1');
 
   const handleClickMenu = useCallback(

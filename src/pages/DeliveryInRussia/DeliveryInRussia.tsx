@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './DeliveryInRussia.scss';
@@ -8,12 +8,18 @@ import { COLORS } from '../../constants';
 import bonus from '../../assets/bonus.png';
 import besplatnaya_dostavka from '../../assets/besplatnaya_dostavka.jpg';
 import besplatnaya_dostavka_rf from '../../assets/besplatnaya_dostavka_rf.jpg';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const DeliveryInRussia: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="container">

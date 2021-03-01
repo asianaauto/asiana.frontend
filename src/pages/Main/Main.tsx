@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import HeatherPreview from '../../components/HeatherPreview/HeatherPreview';
 import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
 import MainNews from '../../components/MainNews/MainNews';
@@ -9,12 +9,18 @@ import { COLORS } from '../../constants';
 import Map from '../../components/Map/Map';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const Main: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <FloatingFooter />

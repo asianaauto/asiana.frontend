@@ -3,6 +3,7 @@ import './Header.scss';
 import logo from '../../assets/logotype.png';
 import orangeLogo from '../../assets/orange-logo.png';
 import { COLORS } from '../../constants';
+import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Menu, Collapse } from 'antd';
 import Button from '../Button/Button';
@@ -114,9 +115,9 @@ const Header: FC<IProps> = () => {
       <Menu className="Header-dropdown-menu">
         {menu.map((item: any) => (
           <Menu.Item className="Header-dropdown-menu--item" key={item.id}>
-            <a className="Header-dropdown-menu--link" href={item.link}>
+            <Link className="Header-dropdown-menu--link" to={item.link}>
               {item.label}
-            </a>
+            </Link>
           </Menu.Item>
         ))}
       </Menu>
@@ -128,9 +129,9 @@ const Header: FC<IProps> = () => {
       if (nav.link) {
         return (
           <div className="Header-burger-menu--item" key={nav.id}>
-            <a className="Header-burger-menu--link" href={nav.link}>
+            <Link className="Header-burger-menu--link" to={nav.link}>
               {nav.label}
-            </a>
+            </Link>
           </div>
         );
       }
@@ -145,12 +146,12 @@ const Header: FC<IProps> = () => {
                 key={nav.id}>
                 <div>
                   {nav.subMenuProps?.navs.map((item) => (
-                    <a
+                    <Link
                       key={item.id}
                       className="Header-burger-menu--link Header-burger-menu--panel-link"
-                      href={item.link}>
+                      to={item.link}>
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Panel>
@@ -196,13 +197,13 @@ const Header: FC<IProps> = () => {
               />
             </Button>
             <div className="d-flex justify-content-center mb-5">
-              <a href="/">
+              <Link to="/">
                 <img
                   className="logo-burger"
                   src={orangeLogo}
                   alt="Logo burger"
                 />
-              </a>
+              </Link>
             </div>
           </div>
           {renderBurgerMenu(NAVS)}
@@ -213,17 +214,17 @@ const Header: FC<IProps> = () => {
         <header style={styleHeader} className="header">
           <div className="header-container--size container page-container--full">
             <div className="d-flex">
-              <a href="/">
+              <Link to="/">
                 <img className="logo" src={logo} alt="Logo" />
-              </a>
+              </Link>
               <div className="Header-container">
                 {NAVS.map((nav) => {
                   if (nav.link) {
                     return (
                       <div className="Header-nav--item" key={nav.id}>
-                        <a className="Header-nav--link" href={nav.link}>
+                        <Link className="Header-nav--link" to={nav.link}>
                           {nav.label}
-                        </a>
+                        </Link>
                       </div>
                     );
                   }

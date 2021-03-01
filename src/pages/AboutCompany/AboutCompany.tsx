@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './AboutCompany.scss';
@@ -13,12 +13,18 @@ import service from '../../assets/service.jpg';
 import auto_master from '../../assets/auto_master.jpg';
 import reception from '../../assets/reception.jpg';
 import internet_magazin from '../../assets/internet_magazin.png';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const AboutCompany: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="AboutCompany-container">

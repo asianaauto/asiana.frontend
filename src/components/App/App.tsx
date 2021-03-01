@@ -7,8 +7,6 @@ import {
 import './App.scss';
 import 'antd/dist/antd.css';
 import 'animate.css';
-// @ts-ignore
-import WOW from 'wowjs';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import AboutCompany from '../../pages/AboutCompany/AboutCompany';
@@ -21,51 +19,30 @@ import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
 import Actions from '../../pages/Actions/Actions';
 import Action from '../../pages/Action/Action';
 import Header from '../Header/Header';
-import { useEffect } from 'react';
+import { Suspense } from 'react';
+import { Spin } from 'antd';
 
 function App() {
-  useEffect(() => {
-    new WOW.WOW().init();
-  }, []);
-
   return (
     <Router>
       <div>
         <FloatingButton />
         <Header />
-        <Switch>
-          <Route exact path="/components">
-            <Components />
-          </Route>
-          <Route exact path="/contacts">
-            <Contacts />
-          </Route>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route exact path="/news">
-            <News />
-          </Route>
-          <Route exact path="/about-company">
-            <AboutCompany />
-          </Route>
-          <Route path="/vacancies">
-            <Vacancies />
-          </Route>
-          <Route path="/car-service">
-            <CarService />
-          </Route>
-          <Route path="/delivery">
-            <DeliveryInRussia />
-          </Route>
-          <Route path="/actions">
-            <Actions />
-          </Route>
-          <Route path="/action/:id">
-            <Action />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
+        <Suspense fallback={<Spin />}>
+          <Switch>
+            <Route exact path="/components" component={Components} />
+            <Route exact path="/contacts" component={Contacts} />
+            <Route exact path="/" component={Main} />
+            <Route exact path="/news" component={News} />
+            <Route exact path="/about-company" component={AboutCompany} />
+            <Route path="/vacancies" component={Vacancies} />
+            <Route path="/car-service" component={CarService} />
+            <Route path="/delivery" component={DeliveryInRussia} />
+            <Route path="/actions" component={Actions} />
+            <Route path="/action/:id" component={Action} />
+            <Redirect to="/" />
+          </Switch>
+        </Suspense>
       </div>
     </Router>
   );

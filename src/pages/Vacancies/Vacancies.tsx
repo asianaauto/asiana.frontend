@@ -1,16 +1,22 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './Vacancies.scss';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import LeftSideBar from '../../components/LeftSideBar/LeftSideBar';
 import Button from '../../components/Button/Button';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const Vacancies: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="container">
