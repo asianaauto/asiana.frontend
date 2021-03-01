@@ -1,13 +1,13 @@
 .Footer-border {
-  background-color: black;
+  background-color: white;
   padding-bottom: 70px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
 .Footer-link {
-  color: orangered;
-  font-size: 13px;
+  color: #e02707;
+  font-size: 14px;
   text-decoration: none;
 
   &:hover {
@@ -16,19 +16,23 @@
   }
 }
 
+.Footer-copyright--block {
+  max-width: 10%;
+}
+
 .Footer-header {
   font-size: 16px;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 
 .Footer-copyright--link {
-  color: #797979;
+  color: black;
   font-size: 13px;
-  padding-top: 20px;
 }
 
 .Footer-copyright--info {
-  color: #797979;
+  color: black;
   font-size: 13px;
   line-height: 18px;
 }
@@ -39,18 +43,13 @@
   padding-top: 50px;
 }
 
-.Footer-img {
-  height: 45px;
-  width: 120px;
-}
-
 .Footer-block {
   padding-left: 30px;
 }
 
 .Footer-list {
-  color: orangered;
-  font-size: 10px;
+  color: #8d1010;
+  font-size: 12px;
   padding-left: 15px;
   padding-top: 20px;
 
@@ -62,8 +61,9 @@
 .Footer-item-p {
   font-size: 18px;
   margin-left: 5px;
-  color: #ffffff;
+  color: black;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover {
     text-decoration: underline;
@@ -74,43 +74,47 @@
 .Footer-item-p {
   a {
     font-size: 18px;
-    color: #de2a1b;
+    color: black;
     text-decoration: none;
+    font-weight: bold;
   }
 }
 
 .Footer-item-Phone {
   font-size: 18px;
   margin-left: 5px;
-  color: #ffffff;
+  color: black;
 }
 
 .mx-1 {
   margin: 0px, 10px;
+  padding-top: 3px;
 }
 
 .Footer-icon-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
+  padding-top: 7px;
 }
 
 .Footer-item-pp {
   margin-left: 5px;
   font-size: 18px;
-  color: white;
+  color: black;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover {
     text-decoration: underline;
-    color: rgb(218, 210, 210);
+    color: rgb(206, 60, 7);
   }
 }
 
 .Footer-biPhone {
   justify-content: flex-end;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 12px;
 }
 
@@ -124,6 +128,7 @@
   display: flex;
   justify-content: flex-end;
   padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 .Footer-icon {

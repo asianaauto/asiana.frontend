@@ -17,11 +17,11 @@ for (let i = 0; i < 23; i++) {
   });
 }
 
-const NewsCard: FC<IProps> = () => {
+const NewsCards: FC<IProps> = () => {
   const renderItem = useCallback((item) => {
     return (
       <List.Item
-        className="NewCard"
+        className="NewCard wow fadeInRight"
         key={item.title}
         actions={[<div>Ваша выгода 15%</div>]}
         extra={
@@ -60,4 +60,4 @@ const NewsCard: FC<IProps> = () => {
   );
 };
 
-export default NewsCard;
+export default NewsCards;

@@ -6,21 +6,23 @@
 }
 
 .callback-bt {
-  background: #38a3fd;
-  border: 2px solid #38a3fd;
+  background: #de2a1b;
+  border: 2px solid #de2a1b;
   border-radius: 50%;
-  box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
+  box-shadow: 0 4px 10px rgba(255, 63, 0, 1);
   cursor: pointer;
   height: 68px;
   text-align: center;
   width: 68px;
   position: fixed;
-  right: 8%;
-  bottom: 18%;
+  left: 2%;
+  bottom: 7%;
   z-index: 999;
-  transition: 0.3s;
-  -webkit-animation: hoverWave linear 1s infinite;
-  animation: hoverWave linear 1s infinite;
+  transition: 0.1s;
+  &:hover {
+    -webkit-animation: hoverWave linear 1s infinite;
+    animation: hoverWave linear 1s infinite;
+  }
 }
 
 .callback-bt .text-call {
@@ -33,11 +35,11 @@
 
 .callback-bt .text-call span {
   text-align: center;
-  color: #38a3fd;
+  color: #de2a1b;
   opacity: 0;
   font-size: 0;
   position: absolute;
-  right: 4px;
+  right: 6px;
   top: 22px;
   line-height: 14px;
   font-weight: 600;
@@ -58,17 +60,17 @@
   z-index: 1;
   background: #fff;
   color: transparent;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .callback-bt:hover .FloatingButton-icon {
-  color: #38a3fd;
+  color: #de2a1b;
   font-size: 40px;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .callback-bt .FloatingButton-icon {
   color: #fff;
   font-size: 34px;
-  transition: 0.3s;
+  transition: 0.1s;
   line-height: 66px;
   transition: 0.5s ease-in-out;
 }
@@ -82,37 +84,37 @@
 
 @-webkit-keyframes hoverWave {
   0% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
-      0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3), 0 0 0 0 rgba(255, 63, 0, 0.2),
+      0 0 0 0 rgba(255, 63, 0, 0.2);
   }
   40% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
-      0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3),
+      0 0 0 15px rgba(255, 63, 0, 0.2), 0 0 0 0 rgba(255, 63, 0, 0.2);
   }
   80% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
-      0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3),
+      0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(255, 63, 0, 0.1);
   }
   100% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3),
       0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
   }
 }
 @keyframes hoverWave {
   0% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
-      0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3), 0 0 0 0 rgba(255, 63, 0, 0.2),
+      0 0 0 0 rgba(255, 63, 0, 0.2);
   }
   40% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
-      0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3),
+      0 0 0 15px rgba(255, 63, 0, 0.3), 0 0 0 0 rgba(255, 63, 0, 0.3);
   }
   80% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
-      0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3),
+      0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(255, 63, 0, 0.1);
   }
   100% {
-    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+    box-shadow: 0 8px 10px rgba(255, 63, 0, 0.3),
       0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
   }
 }

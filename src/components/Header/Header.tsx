@@ -4,11 +4,11 @@ import logo from '../../assets/logotype.png';
 import orangeLogo from '../../assets/orange-logo.png';
 import { COLORS } from '../../constants';
 import { Link } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Menu, Collapse } from 'antd';
 import Button from '../Button/Button';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import SubHeader from '../SubHeader/SubHeader';
 
 const { Panel } = Collapse;
 
@@ -49,45 +49,53 @@ const NAVS: Nav['navs'] = [
           link: '/vacancies',
           label: 'вакансии',
         },
+        {
+          id: 3,
+          label: 'новости',
+          link: '/news',
+        },
+        {
+          id: 4,
+          label: 'акции',
+          link: '/actions',
+        },
       ],
     },
   },
   {
     id: 2,
-    label: 'купить запчасти',
+    label: 'запчасти',
     subMenuProps: {
       navs: [
         {
           id: 1,
-          link: '/contacts',
-          label: 'интернет магазин',
+          link: '/corea',
+          label: 'корея',
+        },
+        {
+          id: 2,
+          link: '/chinese',
+          label: 'китай',
+        },
+        {
+          id: 3,
+          link: '/japan',
+          label: 'япония',
         },
       ],
     },
   },
   {
     id: 3,
-    label: 'услуги автосервиса',
+    label: 'авто с пробегом',
     link: '/car-service',
   },
   {
     id: 4,
-    label: 'предложения оптовикам',
-    subMenuProps: {
-      navs: [
-        {
-          id: 1,
-          link: '/delivery-in-russia',
-          label: 'поставки по России',
-        },
-      ],
-    },
+    label: 'оптовикам',
+    link: '/delivery',
   },
-  {
-    id: 5,
-    label: 'новости',
-    link: '/news',
-  },
+
   {
     id: 6,
     label: 'контакты',
@@ -201,60 +209,65 @@ const Header: FC<IProps> = () => {
           {renderBurgerMenu(NAVS)}
         </div>
       </div>
-      <header style={styleHeader} className="header">
-        <div className="d-flex">
-          <Link to="/">
-            <img className="logo" src={logo} alt="Logo" />
-          </Link>
-          <div className="Header-container">
-            {NAVS.map((nav) => {
-              if (nav.link) {
-                return (
-                  <div className="Header-nav--item" key={nav.id}>
-                    <Link className="Header-nav--link" to={nav.link}>
-                      {nav.label}
-                    </Link>
-                  </div>
-                );
-              }
+      <div className="Header-container--fixed">
+        <SubHeader />
+        <header style={styleHeader} className="header">
+          <div className="header-container--size container page-container--full">
+            <div className="d-flex">
+              <Link to="/">
+                <img className="logo" src={logo} alt="Logo" />
+              </Link>
+              <div className="Header-container">
+                {NAVS.map((nav) => {
+                  if (nav.link) {
+                    return (
+                      <div className="Header-nav--item" key={nav.id}>
+                        <Link className="Header-nav--link" to={nav.link}>
+                          {nav.label}
+                        </Link>
+                      </div>
+                    );
+                  }
 
-              if (nav.subMenuProps?.navs) {
-                return (
-                  <div className="Header-nav--item" key={nav.id}>
-                    <DropdownMenu
-                      label={nav.label}
-                      navs={renderMenu(nav.subMenuProps.navs)}
-                    />
-                  </div>
-                );
-              }
+                  if (nav.subMenuProps?.navs) {
+                    return (
+                      <div className="Header-nav--item" key={nav.id}>
+                        <DropdownMenu
+                          label={nav.label}
+                          navs={renderMenu(nav.subMenuProps.navs)}
+                        />
+                      </div>
+                    );
+                  }
 
-              return null;
-            })}
+                  return null;
+                })}
+              </div>
+            </div>
+            <div className="Header-user--block">
+              {/* <Button
+              className="d-flex align-items-center sign-in--button"
+              bgColor={COLORS.transparent}
+              color={COLORS.red}>
+              <span className="sign-in--label">Войти</span>
+              <FaUser color={COLORS.black} size={20} />
+            </Button> */}
+            </div>
+            <div className="Header-burger--button">
+              <Button
+                className="Header-burger-button"
+                onClick={handleChangeStatus(true)}
+                bgColor={COLORS.transparent}>
+                <AiOutlineMenu
+                  className="Header-burger-button"
+                  color={COLORS.black}
+                  size={25}
+                />
+              </Button>
+            </div>
           </div>
-        </div>
-        <div className="Header-user--block">
-          <Button
-            className="d-flex align-items-center sign-in--button"
-            bgColor={COLORS.transparent}
-            color={COLORS.red}>
-            <span className="sign-in--label">Войти</span>
-            <FaUser color={COLORS.black} size={20} />
-          </Button>
-        </div>
-        <div className="Header-burger--button">
-          <Button
-            className="Header-burger-button"
-            onClick={handleChangeStatus(true)}
-            bgColor={COLORS.transparent}>
-            <AiOutlineMenu
-              className="Header-burger-button"
-              color={COLORS.black}
-              size={25}
-            />
-          </Button>
-        </div>
-      </header>
+        </header>
+      </div>
     </>
   );
 };

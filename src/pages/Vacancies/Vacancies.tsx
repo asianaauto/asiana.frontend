@@ -29,7 +29,7 @@ const Vacancies: FC<IProps> = () => {
               </div>
 
               <div className="Vacancies-title-block">
-                <p>
+                <div className="mb-1">
                   Наша команда – это более 400 человек-профессионалов своего
                   дела.{' '}
                   <p>
@@ -60,7 +60,7 @@ const Vacancies: FC<IProps> = () => {
                     нашим клиентам.{' '}
                   </p>
                   Узнали себя? Тогда ждем ваше резюме!
-                </p>
+                </div>
 
                 <div className="Vacancies-button-block-div">
                   <div className="Vacancies-button-block">

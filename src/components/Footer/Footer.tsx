@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import './Footer.scss';
 import { COLORS } from '../../constants';
-import ASIANAwhite from '../../assets/ASIANA-white.png';
 import { BiPhone, BiUser } from 'react-icons/bi';
 import vk from '../../assets/VK.png';
 import Twitter from '../../assets/Twitter.png';
@@ -18,14 +17,14 @@ const Footer: FC<IProps> = () => {
       <div className="Footer-border">
         <div className="Footer-container">
           <div className="Footer-copyright--block">
-            <div>
-              <img className="Footer-img" src={ASIANAwhite} alt="" />
-            </div>
             <p className="Footer-copyright--item Footer-copyright--link">
-              Copyright © 2012-2021 Koreanaparts.ru
+              Copyright ©2021{' '}
+              <a className="Footer-link" href="/">
+                asianaauto.ru
+              </a>
             </p>
             <p className="Footer-copyright--item Footer-copyright--info">
-              Кореана.рф ООО«Альянс ЛТД» Все права защищены.
+              ООО«Альянс ЛТД» Все права защищены
             </p>
           </div>
           <div className="Footer-links--container">
@@ -34,102 +33,47 @@ const Footer: FC<IProps> = () => {
               <ul className="Footer-list">
                 <li>
                   <a className="Footer-link" href="/">
-                    Запчасти
+                    о компании
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Автосервис
+                    вакансии
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Адреса магазинов
+                    оптовикам
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Оптовикам
+                    контакты
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    О компании
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Контакты
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Поддержка
+                    форма обратной связи
                   </a>
                 </li>
               </ul>
             </div>
             <div className="Footer-block">
-              <h2 className="Footer-header">ИНТЕРНЕТ-МАГАЗИН</h2>
+              <h2 className="Footer-header">ЗАПЧАСТИ</h2>
               <ul className="Footer-list">
                 <li>
                   <a className="Footer-link" href="/">
-                    Договор оферты
+                    Корея
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Дисконтная программа
+                    Китай
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Способы оплаты
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Доставка заказа
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Возврат товара
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти Hyundai
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти KIA
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти Chevrolet
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти DAEWOO
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти SsangYong
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти для ТО
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Запчасти кузова
+                    Япония
                   </a>
                 </li>
               </ul>
@@ -139,42 +83,17 @@ const Footer: FC<IProps> = () => {
               <ul className="Footer-list">
                 <li>
                   <a className="Footer-link" href="/">
-                    Hyundai сервис
+                    Корея
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Kia сервис
+                    Китай
                   </a>
                 </li>
                 <li>
                   <a className="Footer-link" href="/">
-                    Chevrolet сервис
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Daewoo сервис
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    SsangYong сервис
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="Footer-block">
-              <h4 className="Footer-header">КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
-              <ul className="Footer-list">
-                <li>
-                  <a className="Footer-link" href="/">
-                    Форма обратной связи
-                  </a>
-                </li>
-                <li>
-                  <a className="Footer-link" href="/">
-                    Вакансии
+                    Япония
                   </a>
                 </li>
               </ul>
@@ -183,7 +102,7 @@ const Footer: FC<IProps> = () => {
           <div className="Footer-biUser-biPhone">
             <div className="Footer-icon-item">
               <div className="Footer-icon">
-                <BiUser color={COLORS.orange} size={28} />
+                <BiUser color={COLORS.black} size={28} />
               </div>
               <div className="Footer-item-p">
                 <a href="/">вход</a>
@@ -198,7 +117,7 @@ const Footer: FC<IProps> = () => {
               </div>
             </div>
             <div className="Footer-biPhone">
-              <BiPhone color={COLORS.orange} size={28} />
+              <BiPhone className="mr-2" color={COLORS.black} size={28} />
               <div className="Footer-item-Phone">
                 <p>8 (960) 283 77 75</p>
               </div>
@@ -222,16 +141,6 @@ const Footer: FC<IProps> = () => {
             </div>
 
             <div>
-              <p className="Footer-item">
-                Разработка и программинг сайта <br /> агентство интернет-решений{' '}
-                <br /> МОРЕ
-              </p>
-              <p className="Footer-item">
-                Дизайн и продвижение сайта <br /> интернет-агентство
-              </p>
-              <a className="Footer-link mb-2 d-block fs-12 td-line" href="/">
-                Инстарком
-              </a>
               <a className="Footer-link d-block fs-12 td-line mb-1" href="/">
                 Политика использования файлов Cookie
               </a>

@@ -10,10 +10,10 @@ import Promotions from '../Promotions/Promotions';
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
-      speed: 1000,
-      autoplaySpeed: 3000,
+      speed: 3000,
+      autoplaySpeed: 6000,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -24,11 +24,11 @@ export default class SimpleSlider extends Component {
           <Promotions title="ознакомьтесь с акциями" />
         </div>
         <Slider {...settings}>
-          <div>
+          <div className="Slider-slide">
             <img className="slider1" src={image} alt="" />
           </div>
-          <div>
-            <img className="slider2" src={Shinomontag} alt="" />
+          <div className="Slider-slide">
+            <img className="slider1" src={Shinomontag} alt="" />
           </div>
         </Slider>
       </div>

@@ -18,9 +18,18 @@
   height: 90px;
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .BlockWithIcons-link {
   display: block;
-  width: 30%;
+  width: 27%;
   color: #191919;
   padding: 20px;
 
@@ -36,7 +45,7 @@
 
 .BlockWithIcons-block {
   display: flex;
-  padding-right: 500px;
+  padding-right: 390px;
   padding-left: 50px;
 }
 
@@ -46,8 +55,10 @@
 
 .BlockWithIcons-heading {
   margin-top: 10px;
+  font-size: 23px;
   margin-bottom: 10px;
-  transition: 0.3s;
+  transition: 0.1s;
+  font-family: 'Roboto Bold';
 }
 
 @media screen and (max-width: 1200px) {
@@ -85,9 +96,5 @@
 @media screen and (max-width: 400px) {
   .BlockWithIcons-link {
     min-width: 100%;
-
-    .BlockWithIcons-paragraph {
-      display: none;
-    }
   }
 }

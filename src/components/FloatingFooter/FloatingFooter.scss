@@ -4,22 +4,25 @@
   left: 0;
   right: 0;
   justify-content: space-around;
-  background-color: black;
+  background-color: #d3d3d3;
   align-items: center;
   display: flex;
+  z-index: 1000;
 }
 
 .FloatingFooter-button-service {
   &:hover {
     text-decoration: none;
-    background-color: rgb(16, 102, 28) !important;
+    color: #ffb000 !important;
+    background-color: #de2a1b !important;
   }
 }
 
 .FloatingFooter-button-bell {
   &:hover {
     text-decoration: none;
-    background-color: rgb(150, 13, 13) !important;
+    color: #de2a1b !important;
+    background-color: #ffb000 !important;
   }
 }
 
