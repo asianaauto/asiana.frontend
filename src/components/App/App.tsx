@@ -18,6 +18,8 @@ import Vacancies from '../../pages/Vacancies/Vacancies';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import CarService from '../../pages/CarService/CarService';
 import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
+import Actions from '../../pages/Actions/Actions';
+import Action from '../../pages/Action/Action';
 import Header from '../Header/Header';
 import { useEffect } from 'react';
 
@@ -55,6 +57,12 @@ function App() {
           </Route>
           <Route path="/delivery">
             <DeliveryInRussia />
+          </Route>
+          <Route path="/actions">
+            <Actions />
+          </Route>
+          <Route path="/action/:id">
+            <Action />
           </Route>
           <Redirect to="/" />
         </Switch>

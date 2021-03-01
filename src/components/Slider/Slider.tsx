@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import image from '../../assets/Poprobui370x370.jpg';
-import Shinomontag from '../../assets/Shinomontag370x370 (1).jpg';
 import Promotions from '../Promotions/Promotions';
 
 export default class SimpleSlider extends Component {
@@ -25,10 +24,14 @@ export default class SimpleSlider extends Component {
         </div>
         <Slider {...settings}>
           <div className="Slider-slide">
-            <img className="slider1" src={image} alt="" />
+            <a target="_blank" href="/action/1">
+              <img className="slider1" src={image} alt="" />
+            </a>
           </div>
           <div className="Slider-slide">
-            <img className="slider1" src={Shinomontag} alt="" />
+            <a target="_blank" href="/action/1">
+              <img className="slider1" src={image} alt="" />
+            </a>
           </div>
         </Slider>
       </div>
