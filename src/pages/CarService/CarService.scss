@@ -140,6 +140,13 @@
 .CarService-number {
   font-size: 16px;
   font-weight: bold;
+
+  a {
+    color: #ffb000;
+    &:hover {
+      color: #de2a1b !important;
+    }
+  }
 }
 
 .CarService-table-item-block {

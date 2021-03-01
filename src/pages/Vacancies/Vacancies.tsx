@@ -23,7 +23,6 @@ const Vacancies: FC<IProps> = () => {
                     <Breadcrumbs />
                   </div>
                   <h1 className="Vacancies-title">Вакансии Санкт-Петербург</h1>
-                  <h2 className="Vacancies-title-h2">ВАКАНСИИ</h2>
                 </div>
                 <LeftSideBar />
               </div>
@@ -79,7 +78,8 @@ const Vacancies: FC<IProps> = () => {
                 <p className="Vacancies-contact">
                   {' '}
                   <b> По вопросам работы в компании: </b> Чураков Филипп
-                  Анатольевич; +7 (900) 470-08-81;
+                  Анатольевич;{' '}
+                  <a href="tel:+79004700881;">+7 (900) 470-08-81;</a>
                 </p>
               </div>
             </div>
