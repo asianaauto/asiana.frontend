@@ -45,8 +45,8 @@ const SubHeader: FC<IProps> = () => {
               className="mr-4"
               color={COLORS.red}
               bgColor={COLORS.transparent}>
-              <BiPhone className="mr-2" color={COLORS.red} size={24} />8 (960)
-              283 77 75
+              <BiPhone className="mr-2" color={COLORS.red} size={24} />
+              <a href="tel:+79602837775">8 (960)283 77 75</a>
             </Button>
             <Button
               className="d-flex align-items-center"

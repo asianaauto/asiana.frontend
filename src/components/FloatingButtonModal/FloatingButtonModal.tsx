@@ -17,6 +17,7 @@ const FloatingButtonModal: FC<IProps> = ({ visible, onClose }) => {
       visible={visible}
       onClose={onClose}>
       <div>
+        <h1 className="FloatingButtonModal-title">Свяжитесь с нами</h1>
         <p className="FloatingButtonModal-paragraph">Ваше имя:</p>
         <input className="textField"></input>
         <p className="FloatingButtonModal-paragraph">Tелефон:</p>

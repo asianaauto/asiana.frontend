@@ -53,7 +53,13 @@ const columns = [
           <BiPhone className="CarService-biphone mr-1" size={20} />{' '}
           <span className="CarService-number">
             {' '}
-            <b> +7(812) 640-77-99 </b>{' '}
+            <b>
+              {' '}
+              <b>
+                {' '}
+                <a href="tel:++78126407799">+7(812) 640-77-99</a>{' '}
+              </b>{' '}
+            </b>{' '}
           </span>{' '}
         </Button>
       );
@@ -99,14 +105,22 @@ const CarService: FC<IProps> = () => {
         <div>
           <h3 className="CarService-title-h2">МАЛЯРНО-КУЗОВНОЙ ЦЕНТР</h3>
         </div>
-        <Table dataSource={dataSource} columns={columns} />
+        <Table
+          className="wow fadeIn "
+          dataSource={dataSource}
+          columns={columns}
+        />
 
         <h4 className="CarService-title-h2">
           {' '}
           СТАНЦИИ ТЕХНИЧЕСКОГО ОБСЛУЖИВАНИЯ
         </h4>
 
-        <Table dataSource={dataSource} columns={columns} />
+        <Table
+          className="wow fadeIn "
+          dataSource={dataSource}
+          columns={columns}
+        />
         <h5 className="CarService-title-h2">ГАЛЕРЕЯ НАШИХ СТО</h5>
       </div>
 
