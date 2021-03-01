@@ -73,7 +73,7 @@ const Footer: FC<IProps> = () => {
                   </a>
                 </li>
                 <li>
-                  <a onClick={handleOpenModal} className="Footer-link">
+                  <a onClick={handleOpenModal} href="/" className="Footer-link">
                     форма обратной связи
                   </a>
                 </li>

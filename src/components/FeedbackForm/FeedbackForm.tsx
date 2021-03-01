@@ -17,7 +17,7 @@ const FeedbackForm: FC<IProps> = ({ visible, onClose }) => {
       visible={visible}
       onClose={onClose}>
       <div>
-        <h1 className="FeedbackForm-title">Отправить отзыв</h1>
+        <h2 className="FeedbackForm-title">Отправить отзыв</h2>
         <p className="FeedbackForm-paragraph">Ваше имя:</p>
         <input className="textField"></input>
         <p className="FeedbackForm-paragraph">Tелефон:</p>

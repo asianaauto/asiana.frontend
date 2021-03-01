@@ -86,15 +86,15 @@ const AboutCompany: FC<IProps> = () => {
               </div>
 
               <div className="AboutCompany-title-block-p wow fadeIn">
-                <p>
-                  <p>
+                <div className="mb-1">
+                  <div className="mb-1">
                     {' '}
                     <p style={{ color: COLORS.red, fontWeight: 700 }}>
                       {' '}
                       • Сеть станций постгарантийного технического обслуживания
                       корейских автомобилей в{' '}
                     </p>{' '}
-                  </p>{' '}
+                  </div>{' '}
                   <a className="AboutCompany-link" href="/">
                     Санкт-Петербурге
                   </a>{' '}
@@ -137,7 +137,7 @@ const AboutCompany: FC<IProps> = () => {
                   более чем на 10 000 рублей оплачивается нами доставка груза до
                   нужного представительства транспортной компании, расположенной
                   в вашем городе.
-                </p>
+                </div>
               </div>
 
               <div className="AboutCompany-block-icon">
@@ -172,7 +172,7 @@ const AboutCompany: FC<IProps> = () => {
               </div>
 
               <div className="wow fadeIn">
-                <p>
+                <div className="mb-1">
                   •{' '}
                   <a className="AboutCompany-link" href="/">
                     Интернет-магазин автозапчастей
@@ -193,7 +193,7 @@ const AboutCompany: FC<IProps> = () => {
                   в режиме реального времени посмотреть наличие и цену в
                   магазине по интересующему адресу и , позвонив по телефону
                   зарезервировать необходимую автозапчасть.
-                </p>
+                </div>
               </div>
 
               <div>
@@ -205,7 +205,7 @@ const AboutCompany: FC<IProps> = () => {
               </div>
 
               <div className="AboutCompany-title-block-p wow fadeIn">
-                <p>
+                <div className="mb-1">
                   Основным принципом компании Кореана является сохранение
                   доброго имени за счет максимального удовлетворения
                   потребностей наших клиентов, выраженном в качестве
@@ -254,7 +254,7 @@ const AboutCompany: FC<IProps> = () => {
                     {' '}
                     "Контакты"
                   </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>
