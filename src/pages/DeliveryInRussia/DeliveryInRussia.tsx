@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './DeliveryInRussia.scss';
@@ -8,12 +8,18 @@ import { COLORS } from '../../constants';
 import bonus from '../../assets/bonus.png';
 import besplatnaya_dostavka from '../../assets/besplatnaya_dostavka.jpg';
 import besplatnaya_dostavka_rf from '../../assets/besplatnaya_dostavka_rf.jpg';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const DeliveryInRussia: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="container">
@@ -40,19 +46,28 @@ const DeliveryInRussia: FC<IProps> = () => {
                 Санкт-Петербург, Октябрьская набережная д.104 корп.43 лит А и Ж
               </p>
 
-              <p className="DeliveryInRussia-paragraph">Тел.(812) 635-08-62</p>
+              <p className="DeliveryInRussia-paragraph">
+                {' '}
+                <a href="tel:+78126350862">+7(812) 635-08-62</a>
+              </p>
 
               <p className="DeliveryInRussia-paragraph">
                 е-mail:{' '}
-                <a className="DeliveryInRussia-link" href="/">
+                <a
+                  className="DeliveryInRussia-link"
+                  href="mailto:region1@koreana.spb.ru">
                   region1@koreana.spb.ru
                 </a>{' '}
                 ,{' '}
-                <a className="DeliveryInRussia-link" href="/">
+                <a
+                  className="DeliveryInRussia-link"
+                  href="mailto:region2@koreana.spb.ru">
                   region2@koreana.spb.ru
                 </a>{' '}
                 ,{' '}
-                <a className="DeliveryInRussia-link" href="/">
+                <a
+                  className="DeliveryInRussia-link"
+                  href="mailto:region3@koreana.spb.ru">
                   region3@koreana.spb.ru
                 </a>{' '}
               </p>
@@ -112,7 +127,9 @@ const DeliveryInRussia: FC<IProps> = () => {
                 согласованию с покупателем.
               </p>
 
-              <div className="DeliveryInRussia-paragraph-div">
+              <div
+                className="  wow slideInRight  DeliveryInRussia-paragraph-div "
+                data-wow-duration="2s">
                 <div className="DeliveryInRussia-border">
                   <img className="DeliveryInRussia-icon" src={bonus} alt="" />
                   <h4 className="DeliveryInRussia-title-h2">
@@ -164,14 +181,14 @@ const DeliveryInRussia: FC<IProps> = () => {
                 </ul>
               </div>
 
-              <div className="DeliveryInRussia-besplatnaya_dostavka-div">
+              <div className=" DeliveryInRussia-besplatnaya_dostavka-div">
                 <img
-                  className="DeliveryInRussia-besplatnaya_dostavka"
+                  className=" wow zoomIn DeliveryInRussia-besplatnaya_dostavka"
                   src={besplatnaya_dostavka}
                   alt=""
                 />
                 <img
-                  className="DeliveryInRussia-besplatnaya_dostavka"
+                  className=" wow zoomIn DeliveryInRussia-besplatnaya_dostavka"
                   src={besplatnaya_dostavka_rf}
                   alt=""
                 />

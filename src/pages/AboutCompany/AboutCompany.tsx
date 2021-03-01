@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
 import './AboutCompany.scss';
@@ -13,12 +13,18 @@ import service from '../../assets/service.jpg';
 import auto_master from '../../assets/auto_master.jpg';
 import reception from '../../assets/reception.jpg';
 import internet_magazin from '../../assets/internet_magazin.png';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const AboutCompany: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="AboutCompany-container">
@@ -33,7 +39,7 @@ const AboutCompany: FC<IProps> = () => {
             <div className="AboutCompany-leftSidebar-button">
               <LeftSideBar />
               <div className="AboutCompany-button-block">
-                <Button className="AboutCompany-button">
+                <Button className="AboutCompany-button wow fadeInUp">
                   ЖАЛОБЫ И ПРЕДЛОЖЕНИЯ
                 </Button>
               </div>
@@ -43,7 +49,7 @@ const AboutCompany: FC<IProps> = () => {
               <h2 className="AboutCompany-title-h2">
                 ЧТО ПРЕДСТАВЛЯЕТ СОБОЙ КОМПАНИЯ "КОРЕАНА"?
               </h2>
-              <p>
+              <div className="mb-1">
                 Компания «Кореана» поставляет автозапчасти и оказывает услуги в
                 области ремонта и обслуживания автомобилей корейского
                 производства: Hyundai, Kia, Daewoo, Ssang Yong и Chevrolet.
@@ -54,7 +60,7 @@ const AboutCompany: FC<IProps> = () => {
                 клиентам самый широкий спектр услуг и автомобильных запасных
                 частей. Компания быстро росла, и сегодня занимает одну из
                 ведущих позиций на этом рынке.
-              </p>
+              </div>
               <h3 className="AboutCompany-title-h3">
                 НА СЕГОДНЯШНИЙ ДЕНЬ КОМПАНИЯ «КОРЕАНА» - ЭТО:
               </h3>
@@ -72,19 +78,23 @@ const AboutCompany: FC<IProps> = () => {
               </p>
 
               <div>
-                <img className="AboutCompany-leninskiy" src={image} alt="" />
+                <img
+                  className="AboutCompany-leninskiy wow fadeInRight"
+                  src={image}
+                  alt=""
+                />
               </div>
 
-              <div className="AboutCompany-title-block-p">
-                <p>
-                  <p>
+              <div className="AboutCompany-title-block-p wow fadeIn">
+                <div className="mb-1">
+                  <div className="mb-1">
                     {' '}
                     <p style={{ color: COLORS.red, fontWeight: 700 }}>
                       {' '}
                       • Сеть станций постгарантийного технического обслуживания
                       корейских автомобилей в{' '}
                     </p>{' '}
-                  </p>{' '}
+                  </div>{' '}
                   <a className="AboutCompany-link" href="/">
                     Санкт-Петербурге
                   </a>{' '}
@@ -127,22 +137,42 @@ const AboutCompany: FC<IProps> = () => {
                   более чем на 10 000 рублей оплачивается нами доставка груза до
                   нужного представительства транспортной компании, расположенной
                   в вашем городе.
-                </p>
+                </div>
               </div>
 
               <div className="AboutCompany-block-icon">
-                <img className="AboutCompany-image" src={imgicon} alt="" />
-                <img className="AboutCompany-image" src={van} alt="" />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={imgicon}
+                  alt=""
+                />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={van}
+                  alt=""
+                />
               </div>
 
               <div className="AboutCompany-block-icon-two">
-                <img className="AboutCompany-image" src={service} alt="" />
-                <img className="AboutCompany-image" src={auto_master} alt="" />
-                <img className="AboutCompany-image" src={reception} alt="" />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={service}
+                  alt=""
+                />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={auto_master}
+                  alt=""
+                />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={reception}
+                  alt=""
+                />
               </div>
 
-              <div>
-                <p>
+              <div className="wow fadeIn">
+                <div className="mb-1">
                   •{' '}
                   <a className="AboutCompany-link" href="/">
                     Интернет-магазин автозапчастей
@@ -163,19 +193,19 @@ const AboutCompany: FC<IProps> = () => {
                   в режиме реального времени посмотреть наличие и цену в
                   магазине по интересующему адресу и , позвонив по телефону
                   зарезервировать необходимую автозапчасть.
-                </p>
+                </div>
               </div>
 
               <div>
                 <img
-                  className="AboutCompany-leninskiy"
+                  className="AboutCompany-leninskiy wow fadeInLeft"
                   src={internet_magazin}
                   alt=""
                 />
               </div>
 
-              <div className="AboutCompany-title-block-p">
-                <p>
+              <div className="AboutCompany-title-block-p wow fadeIn">
+                <div className="mb-1">
                   Основным принципом компании Кореана является сохранение
                   доброго имени за счет максимального удовлетворения
                   потребностей наших клиентов, выраженном в качестве
@@ -224,7 +254,7 @@ const AboutCompany: FC<IProps> = () => {
                     {' '}
                     "Контакты"
                   </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>

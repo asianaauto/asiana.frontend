@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
@@ -9,6 +9,8 @@ import { BiPhone } from 'react-icons/bi';
 import SliderCarService from '../../components/SliderCarService/SliderCarService';
 import { Table } from 'antd';
 import { COLORS } from '../../constants';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
@@ -51,7 +53,13 @@ const columns = [
           <BiPhone className="CarService-biphone mr-1" size={20} />{' '}
           <span className="CarService-number">
             {' '}
-            <b> +7(812) 640-77-99 </b>{' '}
+            <b>
+              {' '}
+              <b>
+                {' '}
+                <a href="tel:++78126407799">+7(812) 640-77-99</a>{' '}
+              </b>{' '}
+            </b>{' '}
           </span>{' '}
         </Button>
       );
@@ -60,6 +68,10 @@ const columns = [
 ];
 
 const CarService: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <div className="container">
@@ -93,14 +105,22 @@ const CarService: FC<IProps> = () => {
         <div>
           <h3 className="CarService-title-h2">МАЛЯРНО-КУЗОВНОЙ ЦЕНТР</h3>
         </div>
-        <Table dataSource={dataSource} columns={columns} />
+        <Table
+          className="wow fadeIn "
+          dataSource={dataSource}
+          columns={columns}
+        />
 
         <h4 className="CarService-title-h2">
           {' '}
           СТАНЦИИ ТЕХНИЧЕСКОГО ОБСЛУЖИВАНИЯ
         </h4>
 
-        <Table dataSource={dataSource} columns={columns} />
+        <Table
+          className="wow fadeIn "
+          dataSource={dataSource}
+          columns={columns}
+        />
         <h5 className="CarService-title-h2">ГАЛЕРЕЯ НАШИХ СТО</h5>
       </div>
 

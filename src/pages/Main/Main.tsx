@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import HeatherPreview from '../../components/HeatherPreview/HeatherPreview';
 import BlockWithIcons from '../../components/BlockWithIcons/BlockWithIcons';
 import MainNews from '../../components/MainNews/MainNews';
@@ -9,12 +9,18 @@ import { COLORS } from '../../constants';
 import Map from '../../components/Map/Map';
 import Footer from '../../components/Footer/Footer';
 import FloatingFooter from '../../components/FloatingFooter/FloatingFooter';
+// @ts-ignore
+import WOW from 'wowjs';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const Main: FC<IProps> = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <div className="page-with-header">
       <FloatingFooter />
@@ -34,7 +40,8 @@ const Main: FC<IProps> = () => {
               </h2>
               <iframe
                 title="main"
-                className="Main-iframe"
+                data-wow-duration="2s"
+                className="Main-iframe wow slideInLeft"
                 src="https://www.youtube.com/embed/Z44wvK2g544"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -42,7 +49,7 @@ const Main: FC<IProps> = () => {
             </div>
           </div>
           <div className="Main-section align-items-center d-flex justify-content-start">
-            <div>
+            <div className="wow fadeIn" data-wow-duration="3s">
               <p className="Main-item">
                 Компания «Кореана» предлагает запчасти, аксессуары и сервис для
                 автомобилей корейского производства: Hyundai, Kia, Daewoo, Ssang
@@ -79,7 +86,7 @@ const Main: FC<IProps> = () => {
         </section>
         <section className="Main-about-company">
           <div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
@@ -88,7 +95,7 @@ const Main: FC<IProps> = () => {
                 автомобилей на рынок Российской Федерации.
               </p>
             </div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
@@ -97,7 +104,7 @@ const Main: FC<IProps> = () => {
                 доставкой товаров по всей территории России.
               </p>
             </div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
@@ -106,19 +113,19 @@ const Main: FC<IProps> = () => {
                 собственных складах.
               </p>
             </div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
               <p>Запчасти с минимальной наценкой.</p>
             </div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
               <p>Гарантия на приобретённые запчасти.</p>
             </div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
@@ -127,7 +134,7 @@ const Main: FC<IProps> = () => {
                 автомобилей.
               </p>
             </div>
-            <div className="Main-icon">
+            <div className="Main-icon wow slideInLeft" data-wow-duration="2s">
               <div className="Main-block--icon">
                 <BiChevronRight color={COLORS.red} size={30} />
               </div>
@@ -140,25 +147,33 @@ const Main: FC<IProps> = () => {
           </div>
           <div>
             <div className="Main-text-block">
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>
                 <p>Наличие автозапчастей отображается в режиме On-line.</p>
               </div>
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>
                 <p>Оригинальные каталоги запчастей на нашем сайте.</p>
               </div>
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>
                 <p>Наличие службы контроля качества обслуживания клиентов.</p>
               </div>
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>
@@ -168,13 +183,17 @@ const Main: FC<IProps> = () => {
                   СДЭК и DPD.
                 </p>
               </div>
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>
                 <p>Выгодная дисконтная программа.</p>
               </div>
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>
@@ -183,7 +202,9 @@ const Main: FC<IProps> = () => {
                   Parts-Mall, Luzar и KRAFTTECH.
                 </p>
               </div>
-              <div className="Main-icon">
+              <div
+                className="Main-icon wow slideInRight"
+                data-wow-duration="2s">
                 <div className="Main-block--icon">
                   <BiChevronRight color={COLORS.red} size={30} />
                 </div>

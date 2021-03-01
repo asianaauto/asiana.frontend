@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback, useState } from 'react';
 import './Footer.scss';
 import { COLORS } from '../../constants';
 import { BiPhone, BiUser } from 'react-icons/bi';
@@ -6,14 +6,27 @@ import vk from '../../assets/VK.png';
 import Twitter from '../../assets/Twitter.png';
 import YouTube from '../../assets/YouTube.png';
 import OK from '../../assets/OK.png';
+import FeedbackForm from '../../components/FeedbackForm/FeedbackForm';
 
 interface IExternalProps {}
 
 interface IProps extends IExternalProps {}
 
 const Footer: FC<IProps> = () => {
+  const [visible, setVisible] = useState(false);
+
+  const handleOpenModal = useCallback((e) => {
+    e.preventDefault();
+    setVisible(true);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setVisible(false);
+  }, []);
+
   return (
     <div>
+      <FeedbackForm onClose={handleCloseModal} visible={visible} />
       <div className="Footer-border">
         <div className="Footer-container">
           <div className="Footer-copyright--block">
@@ -32,27 +45,35 @@ const Footer: FC<IProps> = () => {
               <h1 className="Footer-header">ОБЩИЙ РАЗДЕЛ</h1>
               <ul className="Footer-list">
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a
+                    className="Footer-link"
+                    href="http://localhost:3000/about-company">
                     о компании
                   </a>
                 </li>
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a
+                    className="Footer-link"
+                    href="http://localhost:3000/vacancies">
                     вакансии
                   </a>
                 </li>
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a
+                    className="Footer-link"
+                    href="http://localhost:3000/delivery">
                     оптовикам
                   </a>
                 </li>
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a
+                    className="Footer-link"
+                    href="http://localhost:3000/contacts">
                     контакты
                   </a>
                 </li>
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a onClick={handleOpenModal} href="/" className="Footer-link">
                     форма обратной связи
                   </a>
                 </li>
@@ -62,11 +83,13 @@ const Footer: FC<IProps> = () => {
               <h2 className="Footer-header">ЗАПЧАСТИ</h2>
               <ul className="Footer-list">
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a
+                    className="Footer-link"
+                    href="https://koreanaparts.ru/parts">
                     Корея
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a className="Footer-link" href="/">
                     Китай
                   </a>
@@ -75,18 +98,20 @@ const Footer: FC<IProps> = () => {
                   <a className="Footer-link" href="/">
                     Япония
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="Footer-block">
               <h3 className="Footer-header">АВТОСЕРВИС</h3>
               <ul className="Footer-list">
                 <li>
-                  <a className="Footer-link" href="/">
+                  <a
+                    className="Footer-link"
+                    href="https://koreanaparts.ru/autoservice">
                     Корея
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a className="Footer-link" href="/">
                     Китай
                   </a>
@@ -95,7 +120,7 @@ const Footer: FC<IProps> = () => {
                   <a className="Footer-link" href="/">
                     Япония
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -119,24 +144,36 @@ const Footer: FC<IProps> = () => {
             <div className="Footer-biPhone">
               <BiPhone className="mr-2" color={COLORS.black} size={28} />
               <div className="Footer-item-Phone">
-                <p>8 (960) 283 77 75</p>
+                <a href="tel:+79602837775">8 (960) 283 77 75</a>
               </div>
             </div>
             <div className="Footer-icon-block">
               <div>
-                <img className="Footer-icon" src={vk} alt="" />
+                <a href="https://vk.com/koreanaparts">
+                  {' '}
+                  <img className="Footer-icon" src={vk} alt="" />{' '}
+                </a>
               </div>
 
               <div>
-                <img className="Footer-icon" src={Twitter} alt="" />
+                <a href="https://twitter.com/Company_Koreana">
+                  {' '}
+                  <img className="Footer-icon" src={Twitter} alt="" />{' '}
+                </a>
               </div>
 
               <div>
-                <img className="Footer-icon" src={YouTube} alt="" />
+                <a href="https://www.youtube.com/channel/UCNTYU5QiLFuM6QcLHZ-ff0w">
+                  {' '}
+                  <img className="Footer-icon" src={YouTube} alt="" />{' '}
+                </a>
               </div>
 
               <div>
-                <img src={OK} alt="" />
+                <a href="https://ok.ru/zapchastih">
+                  {' '}
+                  <img src={OK} alt="" />{' '}
+                </a>
               </div>
             </div>
 
