@@ -48,45 +48,45 @@ export default class SimpleSliderCarService extends Component {
     return (
       <div className="SliderCarService-icon-block">
         <SliderCarService {...settings}>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Parashutnaya} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Commandant} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Sofiyskaya} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Simonova} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Moscow} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Industrial} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Science} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img
               className="SliderCarService-icon"
               src={Krasnoputilovskaya}
               alt=""
             />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img
               className="SliderCarService-icon"
               src={Peoples_Militia}
               alt=""
             />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img className="SliderCarService-icon" src={Small_Balkan} alt="" />
           </div>
-          <div className="SliderCarService-block-div">
+          <div className="wow fadeIn SliderCarService-block-div">
             <img
               className="SliderCarService-icon"
               src={dalnevostochnyy}

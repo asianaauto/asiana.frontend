@@ -83,7 +83,9 @@
 .Footer-item-Phone {
   font-size: 18px;
   margin-left: 5px;
-  color: black;
+  a {
+    color: black;
+  }
 }
 
 .mx-1 {
