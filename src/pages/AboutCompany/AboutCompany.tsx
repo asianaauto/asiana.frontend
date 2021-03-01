@@ -33,7 +33,7 @@ const AboutCompany: FC<IProps> = () => {
             <div className="AboutCompany-leftSidebar-button">
               <LeftSideBar />
               <div className="AboutCompany-button-block">
-                <Button className="AboutCompany-button">
+                <Button className="AboutCompany-button wow fadeInUp">
                   ЖАЛОБЫ И ПРЕДЛОЖЕНИЯ
                 </Button>
               </div>
@@ -43,7 +43,7 @@ const AboutCompany: FC<IProps> = () => {
               <h2 className="AboutCompany-title-h2">
                 ЧТО ПРЕДСТАВЛЯЕТ СОБОЙ КОМПАНИЯ "КОРЕАНА"?
               </h2>
-              <p>
+              <div className="mb-1">
                 Компания «Кореана» поставляет автозапчасти и оказывает услуги в
                 области ремонта и обслуживания автомобилей корейского
                 производства: Hyundai, Kia, Daewoo, Ssang Yong и Chevrolet.
@@ -54,7 +54,7 @@ const AboutCompany: FC<IProps> = () => {
                 клиентам самый широкий спектр услуг и автомобильных запасных
                 частей. Компания быстро росла, и сегодня занимает одну из
                 ведущих позиций на этом рынке.
-              </p>
+              </div>
               <h3 className="AboutCompany-title-h3">
                 НА СЕГОДНЯШНИЙ ДЕНЬ КОМПАНИЯ «КОРЕАНА» - ЭТО:
               </h3>
@@ -72,10 +72,14 @@ const AboutCompany: FC<IProps> = () => {
               </p>
 
               <div>
-                <img className="AboutCompany-leninskiy" src={image} alt="" />
+                <img
+                  className="AboutCompany-leninskiy wow fadeInRight"
+                  src={image}
+                  alt=""
+                />
               </div>
 
-              <div className="AboutCompany-title-block-p">
+              <div className="AboutCompany-title-block-p wow fadeIn">
                 <p>
                   <p>
                     {' '}
@@ -131,17 +135,37 @@ const AboutCompany: FC<IProps> = () => {
               </div>
 
               <div className="AboutCompany-block-icon">
-                <img className="AboutCompany-image" src={imgicon} alt="" />
-                <img className="AboutCompany-image" src={van} alt="" />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={imgicon}
+                  alt=""
+                />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={van}
+                  alt=""
+                />
               </div>
 
               <div className="AboutCompany-block-icon-two">
-                <img className="AboutCompany-image" src={service} alt="" />
-                <img className="AboutCompany-image" src={auto_master} alt="" />
-                <img className="AboutCompany-image" src={reception} alt="" />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={service}
+                  alt=""
+                />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={auto_master}
+                  alt=""
+                />
+                <img
+                  className="AboutCompany-image wow zoomIn"
+                  src={reception}
+                  alt=""
+                />
               </div>
 
-              <div>
+              <div className="wow fadeIn">
                 <p>
                   •{' '}
                   <a className="AboutCompany-link" href="/">
@@ -168,13 +192,13 @@ const AboutCompany: FC<IProps> = () => {
 
               <div>
                 <img
-                  className="AboutCompany-leninskiy"
+                  className="AboutCompany-leninskiy wow fadeInLeft"
                   src={internet_magazin}
                   alt=""
                 />
               </div>
 
-              <div className="AboutCompany-title-block-p">
+              <div className="AboutCompany-title-block-p wow fadeIn">
                 <p>
                   Основным принципом компании Кореана является сохранение
                   доброго имени за счет максимального удовлетворения

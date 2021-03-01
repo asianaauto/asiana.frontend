@@ -17,34 +17,34 @@ const BlockWithIcons: FC<IProps> = () => {
   return (
     <div style={ColorsBlockWithIcons} className="BlockWithIcons-block">
       <div className="d-flex justify-content-center flex-wrap container page-container--full">
-        <Link className="BlockWithIcons-link" to="/">
+        <Link className="BlockWithIcons-link wow fadeIn" to="/">
           <div className="BlockWithIcons-item">
             <img
               className="BlockWithIcons-SparePartsstyle"
               src={SpareParts}
               alt=""
             />
-            <h1 className="BlockWithIcons-heading">Запчасти</h1>
+            <p className="BlockWithIcons-heading">Запчасти</p>
           </div>
         </Link>
-        <Link className="BlockWithIcons-link" to="/">
+        <Link className="BlockWithIcons-link wow fadeIn" to="/">
           <div className="BlockWithIcons-item">
             <img
               className="BlockWithIcons-CarServicestyle"
               src={CarService}
               alt=""
             />
-            <h1 className="BlockWithIcons-heading">Автосервис</h1>
+            <p className="BlockWithIcons-heading">Автосервис</p>
           </div>
         </Link>
-        <Link className="BlockWithIcons-link" to="/">
+        <Link className="BlockWithIcons-link wow fadeIn" to="/">
           <div className="BlockWithIcons-item">
             <img
               className="BlockWithIcons-ForWholesalersstyle"
               src={ForWholesalers}
               alt=""
             />
-            <h1 className="BlockWithIcons-heading">Автосалон </h1>
+            <p className="BlockWithIcons-heading">Автосалон </p>
           </div>
         </Link>
       </div>

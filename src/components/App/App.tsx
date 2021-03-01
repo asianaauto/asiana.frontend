@@ -6,6 +6,9 @@ import {
 } from 'react-router-dom';
 import './App.scss';
 import 'antd/dist/antd.css';
+import 'animate.css';
+// @ts-ignore
+import WOW from 'wowjs';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import AboutCompany from '../../pages/AboutCompany/AboutCompany';
@@ -16,8 +19,13 @@ import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import CarService from '../../pages/CarService/CarService';
 import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
 import Header from '../Header/Header';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <Router>
       <div>

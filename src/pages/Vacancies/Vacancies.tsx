@@ -29,7 +29,7 @@ const Vacancies: FC<IProps> = () => {
               </div>
 
               <div className="Vacancies-title-block">
-                <p>
+                <div className="mb-1">
                   Наша команда – это более 400 человек-профессионалов своего
                   дела. <p></p>
                   Среди них есть те, кто работает с нами уже много лет, и те,
@@ -44,7 +44,7 @@ const Vacancies: FC<IProps> = () => {
                   находить сильные решения и тем самым оказывать лучший сервис
                   нашим клиентам. <p></p>
                   Узнали себя? Тогда ждем ваше резюме!
-                </p>
+                </div>
 
                 <div className="Vacancies-button-block-div">
                   <div className="Vacancies-button-block">
