@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/asiana.frontend/static/css/main.6c0ba60a.chunk.css",
-    "main.js": "/asiana.frontend/static/js/main.3a43b82b.chunk.js",
-    "main.js.map": "/asiana.frontend/static/js/main.3a43b82b.chunk.js.map",
+    "main.css": "/asiana.frontend/static/css/main.2688ddee.chunk.css",
+    "main.js": "/asiana.frontend/static/js/main.67ddbacc.chunk.js",
+    "main.js.map": "/asiana.frontend/static/js/main.67ddbacc.chunk.js.map",
     "runtime-main.js": "/asiana.frontend/static/js/runtime-main.52a2d852.js",
     "runtime-main.js.map": "/asiana.frontend/static/js/runtime-main.52a2d852.js.map",
-    "static/css/2.436b7c5a.chunk.css": "/asiana.frontend/static/css/2.436b7c5a.chunk.css",
-    "static/js/2.be87aa3a.chunk.js": "/asiana.frontend/static/js/2.be87aa3a.chunk.js",
-    "static/js/2.be87aa3a.chunk.js.map": "/asiana.frontend/static/js/2.be87aa3a.chunk.js.map",
+    "static/css/2.aac0d2b5.chunk.css": "/asiana.frontend/static/css/2.aac0d2b5.chunk.css",
+    "static/js/2.b1a24cd2.chunk.js": "/asiana.frontend/static/js/2.b1a24cd2.chunk.js",
+    "static/js/2.b1a24cd2.chunk.js.map": "/asiana.frontend/static/js/2.b1a24cd2.chunk.js.map",
     "index.html": "/asiana.frontend/index.html",
-    "static/css/2.436b7c5a.chunk.css.map": "/asiana.frontend/static/css/2.436b7c5a.chunk.css.map",
-    "static/css/main.6c0ba60a.chunk.css.map": "/asiana.frontend/static/css/main.6c0ba60a.chunk.css.map",
-    "static/js/2.be87aa3a.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.be87aa3a.chunk.js.LICENSE.txt",
+    "static/css/2.aac0d2b5.chunk.css.map": "/asiana.frontend/static/css/2.aac0d2b5.chunk.css.map",
+    "static/css/main.2688ddee.chunk.css.map": "/asiana.frontend/static/css/main.2688ddee.chunk.css.map",
+    "static/js/2.b1a24cd2.chunk.js.LICENSE.txt": "/asiana.frontend/static/js/2.b1a24cd2.chunk.js.LICENSE.txt",
     "static/media/Commandant.681d6c0c.jpg": "/asiana.frontend/static/media/Commandant.681d6c0c.jpg",
     "static/media/Industrial.9eb7cd31.jpg": "/asiana.frontend/static/media/Industrial.9eb7cd31.jpg",
     "static/media/Krasnoputilovskaya.3161a396.jpg": "/asiana.frontend/static/media/Krasnoputilovskaya.3161a396.jpg",
@@ -21,7 +21,6 @@
     "static/media/Peoples_Militia.ea87ea93.jpg": "/asiana.frontend/static/media/Peoples_Militia.ea87ea93.jpg",
     "static/media/Poprobui370x370.9c92ec98.jpg": "/asiana.frontend/static/media/Poprobui370x370.9c92ec98.jpg",
     "static/media/Science.59116535.jpg": "/asiana.frontend/static/media/Science.59116535.jpg",
-    "static/media/Shinomontag370x370 (1).c70bec34.jpg": "/asiana.frontend/static/media/Shinomontag370x370 (1).c70bec34.jpg",
     "static/media/Simonova.2ca96cf0.jpg": "/asiana.frontend/static/media/Simonova.2ca96cf0.jpg",
     "static/media/Small_Balkan.db69d3f5.jpg": "/asiana.frontend/static/media/Small_Balkan.db69d3f5.jpg",
     "static/media/Sofiyskaya.89d3c13a.jpg": "/asiana.frontend/static/media/Sofiyskaya.89d3c13a.jpg",
@@ -42,9 +41,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.52a2d852.js",
-    "static/css/2.436b7c5a.chunk.css",
-    "static/js/2.be87aa3a.chunk.js",
-    "static/css/main.6c0ba60a.chunk.css",
-    "static/js/main.3a43b82b.chunk.js"
+    "static/css/2.aac0d2b5.chunk.css",
+    "static/js/2.b1a24cd2.chunk.js",
+    "static/css/main.2688ddee.chunk.css",
+    "static/js/main.67ddbacc.chunk.js"
   ]
 }
