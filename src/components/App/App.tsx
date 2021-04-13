@@ -7,6 +7,7 @@ import {
 import './App.scss';
 import 'antd/dist/antd.css';
 import 'animate.css';
+import AuthProvider from '../../providers/AuthProvider';
 import Components from '../../pages/Components/Components';
 import Contacts from '../../pages/Contacts/Contacts';
 import AboutCompany from '../../pages/AboutCompany/AboutCompany';
@@ -18,28 +19,32 @@ import CarService from '../../pages/CarService/CarService';
 import DeliveryInRussia from '../../pages/DeliveryInRussia/DeliveryInRussia';
 import Actions from '../../pages/Actions/Actions';
 import Action from '../../pages/Action/Action';
+import Auth from '../../pages/Auth/Auth';
 import Header from '../Header/Header';
 
 function App() {
   return (
     <Router>
-      <div>
-        <FloatingButton />
-        <Header />
-        <Switch>
-          <Route exact path="/components" component={Components} />
-          <Route exact path="/contacts" component={Contacts} />
-          <Route exact path="/" component={Main} />
-          <Route exact path="/news" component={News} />
-          <Route exact path="/about-company" component={AboutCompany} />
-          <Route path="/vacancies" component={Vacancies} />
-          <Route path="/car-service" component={CarService} />
-          <Route path="/delivery" component={DeliveryInRussia} />
-          <Route path="/actions" component={Actions} />
-          <Route path="/action/:id" component={Action} />
-          <Redirect to="/" />
-        </Switch>
-      </div>
+      <AuthProvider>
+        <div>
+          <FloatingButton />
+          <Header />
+          <Switch>
+            <Route exact path="/auth" component={Auth} />
+            <Route exact path="/components" component={Components} />
+            <Route exact path="/contacts" component={Contacts} />
+            <Route exact path="/" component={Main} />
+            <Route exact path="/news" component={News} />
+            <Route exact path="/about-company" component={AboutCompany} />
+            <Route path="/vacancies" component={Vacancies} />
+            <Route path="/car-service" component={CarService} />
+            <Route path="/delivery" component={DeliveryInRussia} />
+            <Route path="/actions" component={Actions} />
+            <Route path="/action/:id" component={Action} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
+      </AuthProvider>
     </Router>
   );
 }

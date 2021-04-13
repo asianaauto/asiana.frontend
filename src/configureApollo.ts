@@ -1,22 +1,40 @@
 import {
   ApolloClient,
-  InMemoryCache,
   ApolloLink,
   HttpLink,
+  InMemoryCache,
 } from '@apollo/client';
+import { onError } from '@apollo/client/link/error';
 
-export default () => {
+const URL = 'https://app.china-parts.ru/graphql/';
+
+const configureApolloo = () => {
+  const errorLink = onError(({ graphQLErrors, networkError }) => {
+    if (graphQLErrors)
+      graphQLErrors.map(({ message, locations, path }) =>
+        console.log(
+          `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+        ),
+      );
+    if (networkError) console.log(`[Network error]: ${networkError}`);
+  });
+  const httpLink = new HttpLink({
+    uri: URL,
+  });
+
   const cache = new InMemoryCache();
+  const link = ApolloLink.from([httpLink, errorLink]);
 
   const client = new ApolloClient({
-    uri: 'https://app.asianaauto.ru/graphql',
+    link: link,
+    uri: URL,
     headers: {
-      Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTE4MjYxMDUsImV4cCI6MTY0MzM2MjEwNSwidXNlcl9pZCI6MSwiZGV2aWNlX2lkIjoxfQ.nx996TVwtyi5PCPBxLKXXyyc1eDcXc4ud8SqcZFWgI0`,
       'Cache-Control': 'no-cache',
-      'Content-Type': 'application/json',
     },
     cache,
   });
 
   return client;
 };
+
+export default configureApolloo;
