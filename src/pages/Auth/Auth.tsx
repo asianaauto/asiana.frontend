@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { setCookie } from '../../services/cookie';
 import { connect } from 'react-redux';
 import { setToken } from '../../actions';
+import { encoding } from '../../services/encoding';
 
 interface IExternalProps {}
 
@@ -21,6 +22,9 @@ interface IProps extends IExternalProps {
 
 const Auth: FC<IProps> = ({ setToken, token }) => {
   const history = useHistory();
+  // eslint-disable-next-line no-useless-escape
+  const redirectUrl = history.location.search.replace(/.+\=/, '');
+
   const [tokenAuth, { data: tokenAuthData, loading }] = useMutation(TOKEN_AUTH);
   const [
     createUser,
@@ -63,11 +67,19 @@ const Auth: FC<IProps> = ({ setToken, token }) => {
       for (const [name, value] of formData) {
         data[name] = value;
       }
-      tokenAuth({ variables: data }).catch((res) => {
-        res.graphQLErrors.forEach((error: { message: string }) => {
-          message.error(error.message);
+      tokenAuth({ variables: data })
+        .then(({ data }) => {
+          console.log(data.tokenAuth);
+          if (redirectUrl) {
+            window.location.href =
+              redirectUrl + `?token=${encoding(data.tokenAuth.token)}`;
+          }
+        })
+        .catch((res) => {
+          res.graphQLErrors.forEach((error: { message: string }) => {
+            message.error(error.message);
+          });
         });
-      });
     },
     [tokenAuth],
   );
